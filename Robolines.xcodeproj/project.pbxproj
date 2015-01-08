@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		790B06AE176411E90000D888 /* MoveNumberModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 790B06AC176411E90000D888 /* MoveNumberModalViewController.m */; };
+		790B06AF176411E90000D888 /* MoveNumberModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790B06AD176411E90000D888 /* MoveNumberModalViewController.xib */; };
+		7910B86016063CB400121A68 /* Cards.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7910B85F16063CB400121A68 /* Cards.xml */; };
+		79110E54162CF95400570A0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79110E53162CF95400570A0B /* InfoPlist.strings */; };
+		79110E56162CFCEA00570A0B /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE53160FF2E70015BFE6 /* Game.m */; };
+		79110E57162CFCF800570A0B /* Computer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE51160FF2910015BFE6 /* Computer.m */; };
+		79110E58162CFD1400570A0B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE4F160FF2710015BFE6 /* Player.m */; };
+		79131FFF175592DC00CE581F /* PartSelectorModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79131FFD175592DC00CE581F /* PartSelectorModalViewController.m */; };
+		79132000175592DC00CE581F /* PartSelectorModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */; };
+		793352C615EAF2B900FD5175 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C115EAF2B900FD5175 /* cover.png */; };
+		793352C715EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */; };
+		793352C815EAF2B900FD5175 /* robolinesthumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C315EAF2B900FD5175 /* robolinesthumb.png */; };
+		793352C915EAF2B900FD5175 /* Robot Frame.ai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793352C415EAF2B900FD5175 /* Robot Frame.ai.jpg */; };
+		793352CA15EAF2B900FD5175 /* thumb-Card-back.ai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 793352C515EAF2B900FD5175 /* thumb-Card-back.ai.jpg */; };
+		793352CE15EAF38E00FD5175 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352CD15EAF38E00FD5175 /* Default-Landscape~ipad.png */; };
+		7943A73F16B4326300850DC0 /* card_cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71516B4326300850DC0 /* card_cardBack.png */; };
+		7943A74016B4326300850DC0 /* card_drawfive.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71616B4326300850DC0 /* card_drawfive.png */; };
+		7943A74116B4326300850DC0 /* card_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71716B4326300850DC0 /* card_frame.png */; };
+		7943A74216B4326300850DC0 /* card_installblueanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71816B4326300850DC0 /* card_installblueanddraw.png */; };
+		7943A74316B4326300850DC0 /* card_installblueandgreenanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71916B4326300850DC0 /* card_installblueandgreenanddraw.png */; };
+		7943A74416B4326300850DC0 /* card_installblueandpurpleanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71A16B4326300850DC0 /* card_installblueandpurpleanddraw.png */; };
+		7943A74516B4326300850DC0 /* card_installblueandredanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71B16B4326300850DC0 /* card_installblueandredanddraw.png */; };
+		7943A74616B4326300850DC0 /* card_installblueandyellowanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71C16B4326300850DC0 /* card_installblueandyellowanddraw.png */; };
+		7943A74716B4326300850DC0 /* card_installgreenanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71D16B4326300850DC0 /* card_installgreenanddraw.png */; };
+		7943A74816B4326300850DC0 /* card_installgreenandpurpleandblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71E16B4326300850DC0 /* card_installgreenandpurpleandblue.png */; };
+		7943A74916B4326300850DC0 /* card_installgreenandpurpleanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A71F16B4326300850DC0 /* card_installgreenandpurpleanddraw.png */; };
+		7943A74A16B4326300850DC0 /* card_installgreenandredandblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72016B4326300850DC0 /* card_installgreenandredandblue.png */; };
+		7943A74B16B4326300850DC0 /* card_installgreenandredandpurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72116B4326300850DC0 /* card_installgreenandredandpurple.png */; };
+		7943A74C16B4326300850DC0 /* card_installpurpleanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72216B4326300850DC0 /* card_installpurpleanddraw.png */; };
+		7943A74D16B4326300850DC0 /* card_installredanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72316B4326300850DC0 /* card_installredanddraw.png */; };
+		7943A74E16B4326300850DC0 /* card_installredandgreenanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72416B4326300850DC0 /* card_installredandgreenanddraw.png */; };
+		7943A74F16B4326300850DC0 /* card_installredandpurpleandblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72516B4326300850DC0 /* card_installredandpurpleandblue.png */; };
+		7943A75016B4326300850DC0 /* card_installredandpurpleanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72616B4326300850DC0 /* card_installredandpurpleanddraw.png */; };
+		7943A75116B4326300850DC0 /* card_installredandyellowanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72716B4326300850DC0 /* card_installredandyellowanddraw.png */; };
+		7943A75216B4326300850DC0 /* card_installwild.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72816B4326300850DC0 /* card_installwild.png */; };
+		7943A75316B4326300850DC0 /* card_installwildandswap.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72916B4326300850DC0 /* card_installwildandswap.png */; };
+		7943A75416B4326300850DC0 /* card_installyellowanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72A16B4326300850DC0 /* card_installyellowanddraw.png */; };
+		7943A75516B4326300850DC0 /* card_installyellowandgreenandblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72B16B4326300850DC0 /* card_installyellowandgreenandblue.png */; };
+		7943A75616B4326300850DC0 /* card_installyellowandpurpleandblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72C16B4326300850DC0 /* card_installyellowandpurpleandblue.png */; };
+		7943A75716B4326300850DC0 /* card_installyellowandpurpleanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72D16B4326300850DC0 /* card_installyellowandpurpleanddraw.png */; };
+		7943A75816B4326300850DC0 /* card_installyellowandpurpleandgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72E16B4326300850DC0 /* card_installyellowandpurpleandgreen.png */; };
+		7943A75916B4326300850DC0 /* card_installyellowandpurpleandred.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A72F16B4326300850DC0 /* card_installyellowandpurpleandred.png */; };
+		7943A75A16B4326300850DC0 /* card_installyellowandredandblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73016B4326300850DC0 /* card_installyellowandredandblue.png */; };
+		7943A75B16B4326300850DC0 /* card_installyellowandredandgreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73116B4326300850DC0 /* card_installyellowandredandgreen.png */; };
+		7943A75C16B4326300850DC0 /* card_moveplusorminusthree.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73216B4326300850DC0 /* card_moveplusorminusthree.png */; };
+		7943A75D16B4326300850DC0 /* card_peek.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73316B4326300850DC0 /* card_peek.png */; };
+		7943A75E16B4326300850DC0 /* card_removeblueandmove.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73416B4326300850DC0 /* card_removeblueandmove.png */; };
+		7943A75F16B4326300850DC0 /* card_removeblueandplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73516B4326300850DC0 /* card_removeblueandplay.png */; };
+		7943A76016B4326300850DC0 /* card_removegreenandmove.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73616B4326300850DC0 /* card_removegreenandmove.png */; };
+		7943A76116B4326300850DC0 /* card_removegreenandplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73716B4326300850DC0 /* card_removegreenandplay.png */; };
+		7943A76216B4326300850DC0 /* card_removepurpleandmove.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73816B4326300850DC0 /* card_removepurpleandmove.png */; };
+		7943A76316B4326300850DC0 /* card_removepurpleandplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73916B4326300850DC0 /* card_removepurpleandplay.png */; };
+		7943A76416B4326300850DC0 /* card_removeredandmove.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73A16B4326300850DC0 /* card_removeredandmove.png */; };
+		7943A76516B4326300850DC0 /* card_removeredandplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73B16B4326300850DC0 /* card_removeredandplay.png */; };
+		7943A76616B4326300850DC0 /* card_removewild.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73C16B4326300850DC0 /* card_removewild.png */; };
+		7943A76716B4326300850DC0 /* card_removeyellowandmove.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73D16B4326300850DC0 /* card_removeyellowandmove.png */; };
+		7943A76816B4326300850DC0 /* card_removeyellowandplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73E16B4326300850DC0 /* card_removeyellowandplay.png */; };
+		7943A76B16B4400B00850DC0 /* card_installyellowandgreenanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A76A16B4400B00850DC0 /* card_installyellowandgreenanddraw.png */; };
+		7956456716B8B0F100C91950 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956456616B8B0F100C91950 /* OptionsViewController.m */; };
+		795AB39B1A1BD465006DFF95 /* UIDeckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39A1A1BD465006DFF95 /* UIDeckView.m */; };
+		7967DE56160FF57D0015BFE6 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE55160FF57D0015BFE6 /* Card.m */; };
+		7967DE59160FF9080015BFE6 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE58160FF9080015BFE6 /* Deck.m */; };
+		79820EEC15D87F54004A008A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79820EEB15D87F54004A008A /* UIKit.framework */; };
+		79820EEE15D87F54004A008A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79820EED15D87F54004A008A /* Foundation.framework */; };
+		79820EF015D87F54004A008A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79820EEF15D87F54004A008A /* CoreGraphics.framework */; };
+		79820EF815D87F54004A008A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79820EF715D87F54004A008A /* main.m */; };
+		79820EFC15D87F54004A008A /* RoboAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79820EFB15D87F54004A008A /* RoboAppDelegate.m */; };
+		79820F0215D87F54004A008A /* RoboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79820F0115D87F54004A008A /* RoboViewController.m */; };
+		79901B4F1602B69B002790B6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79901B4A1602B69A002790B6 /* MainStoryboard.storyboard */; };
+		799428D016BDCD4F00A443C3 /* metal_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 799428CF16BDCD4F00A443C3 /* metal_background.png */; };
+		799428D316BDD3D300A443C3 /* PlayerSidebarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 799428D216BDD3D300A443C3 /* PlayerSidebarView.m */; };
+		7994CC2D161F387700584E90 /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 7994CC2C161F387700584E90 /* Board.m */; };
+		7997B8E417471EFB007690B7 /* FrameModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997B8E317471EFB007690B7 /* FrameModalViewController.m */; };
+		7997F8BA15EA606F0061C65D /* NewGameOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997F8B915EA606F0061C65D /* NewGameOptionsViewController.m */; };
+		799892E316796B2F00D1FC6A /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 799892E216796B2F00D1FC6A /* CardView.m */; };
+		7998935117D4FB1A007A40F3 /* HandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7998935317D4FB1A007A40F3 /* HandViewController.xib */; };
+		7998DE14162B86D900FAA92C /* CardAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998DE13162B86D900FAA92C /* CardAction.m */; };
+		799914EC1619284500DE3A8B /* Space.m in Sources */ = {isa = PBXBuildFile; fileRef = 799914EB1619284500DE3A8B /* Space.m */; };
+		799BC6421634B2BC0079E1CC /* cardslotbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 799BC6411634B2BC0079E1CC /* cardslotbackground.png */; };
+		799DE44415F6EB490060AFA7 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DE44315F6EB490060AFA7 /* GameViewController.m */; };
+		79A1F4D519040D2F00A025AE /* RoboPlayerCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1F4D319040D2F00A025AE /* RoboPlayerCreatorViewController.m */; };
+		79A1F4D619040D2F00A025AE /* RoboPlayerCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A1F4D419040D2F00A025AE /* RoboPlayerCreatorViewController.xib */; };
+		79A546BB19B3E544000B52FA /* RoboFrameCardAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A546BA19B3E544000B52FA /* RoboFrameCardAction.m */; };
+		79A546BE19B3E65F000B52FA /* RoboPeekCardAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A546BD19B3E65F000B52FA /* RoboPeekCardAction.m */; };
+		79A58D0B194BF0B5000F7644 /* NextPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A58D09194BF0B5000F7644 /* NextPlayerViewController.m */; };
+		79A58D0C194BF0B5000F7644 /* NextPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A58D0A194BF0B5000F7644 /* NextPlayerViewController.xib */; };
+		79A89332184269A200492E31 /* RoboDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A89331184269A200492E31 /* RoboDeck.m */; };
+		79AC62FF1901EFDD00C0F864 /* RoboPartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AC62FE1901EFDD00C0F864 /* RoboPartButton.m */; };
+		79AE402C19B147B900129911 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AE402B19B147B900129911 /* GameKit.framework */; };
+		79B9E67619B36D63004A5F93 /* RoboCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B9E67519B36D63004A5F93 /* RoboCard.m */; };
+		79BBBAD317680119009B5B7F /* HandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BBBAD117680119009B5B7F /* HandViewController.m */; };
+		79F6077D175D79A2002B436E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6077C175D79A2002B436E /* ModalViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		790B06AB176411E90000D888 /* MoveNumberModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveNumberModalViewController.h; sourceTree = "<group>"; };
+		790B06AC176411E90000D888 /* MoveNumberModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveNumberModalViewController.m; sourceTree = "<group>"; };
+		790B06AD176411E90000D888 /* MoveNumberModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoveNumberModalViewController.xib; sourceTree = "<group>"; };
+		7910B85F16063CB400121A68 /* Cards.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Cards.xml; sourceTree = "<group>"; };
+		79110E53162CF95400570A0B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		79131FFC175592DC00CE581F /* PartSelectorModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartSelectorModalViewController.h; sourceTree = "<group>"; };
+		79131FFD175592DC00CE581F /* PartSelectorModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartSelectorModalViewController.m; sourceTree = "<group>"; };
+		79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PartSelectorModalViewController.xib; sourceTree = "<group>"; };
+		793352C115EAF2B900FD5175 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = ../../../../Pictures/RobolinesPics/cover.png; sourceTree = "<group>"; };
+		793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Robolines_iPad_Splashscreen.png; path = ../../../../Pictures/RobolinesPics/Robolines_iPad_Splashscreen.png; sourceTree = "<group>"; };
+		793352C315EAF2B900FD5175 /* robolinesthumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robolinesthumb.png; path = ../../../../Pictures/RobolinesPics/robolinesthumb.png; sourceTree = "<group>"; };
+		793352C415EAF2B900FD5175 /* Robot Frame.ai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Robot Frame.ai.jpg"; path = "../../../../Pictures/RobolinesPics/Robot Frame.ai.jpg"; sourceTree = "<group>"; };
+		793352C515EAF2B900FD5175 /* thumb-Card-back.ai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "thumb-Card-back.ai.jpg"; path = "../../../../Pictures/RobolinesPics/thumb-Card-back.ai.jpg"; sourceTree = "<group>"; };
+		793352CD15EAF38E00FD5175 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		7943A71516B4326300850DC0 /* card_cardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_cardBack.png; sourceTree = "<group>"; };
+		7943A71616B4326300850DC0 /* card_drawfive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_drawfive.png; sourceTree = "<group>"; };
+		7943A71716B4326300850DC0 /* card_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_frame.png; sourceTree = "<group>"; };
+		7943A71816B4326300850DC0 /* card_installblueanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installblueanddraw.png; sourceTree = "<group>"; };
+		7943A71916B4326300850DC0 /* card_installblueandgreenanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installblueandgreenanddraw.png; sourceTree = "<group>"; };
+		7943A71A16B4326300850DC0 /* card_installblueandpurpleanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installblueandpurpleanddraw.png; sourceTree = "<group>"; };
+		7943A71B16B4326300850DC0 /* card_installblueandredanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installblueandredanddraw.png; sourceTree = "<group>"; };
+		7943A71C16B4326300850DC0 /* card_installblueandyellowanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installblueandyellowanddraw.png; sourceTree = "<group>"; };
+		7943A71D16B4326300850DC0 /* card_installgreenanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installgreenanddraw.png; sourceTree = "<group>"; };
+		7943A71E16B4326300850DC0 /* card_installgreenandpurpleandblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installgreenandpurpleandblue.png; sourceTree = "<group>"; };
+		7943A71F16B4326300850DC0 /* card_installgreenandpurpleanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installgreenandpurpleanddraw.png; sourceTree = "<group>"; };
+		7943A72016B4326300850DC0 /* card_installgreenandredandblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installgreenandredandblue.png; sourceTree = "<group>"; };
+		7943A72116B4326300850DC0 /* card_installgreenandredandpurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installgreenandredandpurple.png; sourceTree = "<group>"; };
+		7943A72216B4326300850DC0 /* card_installpurpleanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installpurpleanddraw.png; sourceTree = "<group>"; };
+		7943A72316B4326300850DC0 /* card_installredanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installredanddraw.png; sourceTree = "<group>"; };
+		7943A72416B4326300850DC0 /* card_installredandgreenanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installredandgreenanddraw.png; sourceTree = "<group>"; };
+		7943A72516B4326300850DC0 /* card_installredandpurpleandblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installredandpurpleandblue.png; sourceTree = "<group>"; };
+		7943A72616B4326300850DC0 /* card_installredandpurpleanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installredandpurpleanddraw.png; sourceTree = "<group>"; };
+		7943A72716B4326300850DC0 /* card_installredandyellowanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installredandyellowanddraw.png; sourceTree = "<group>"; };
+		7943A72816B4326300850DC0 /* card_installwild.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installwild.png; sourceTree = "<group>"; };
+		7943A72916B4326300850DC0 /* card_installwildandswap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installwildandswap.png; sourceTree = "<group>"; };
+		7943A72A16B4326300850DC0 /* card_installyellowanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowanddraw.png; sourceTree = "<group>"; };
+		7943A72B16B4326300850DC0 /* card_installyellowandgreenandblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandgreenandblue.png; sourceTree = "<group>"; };
+		7943A72C16B4326300850DC0 /* card_installyellowandpurpleandblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandpurpleandblue.png; sourceTree = "<group>"; };
+		7943A72D16B4326300850DC0 /* card_installyellowandpurpleanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandpurpleanddraw.png; sourceTree = "<group>"; };
+		7943A72E16B4326300850DC0 /* card_installyellowandpurpleandgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandpurpleandgreen.png; sourceTree = "<group>"; };
+		7943A72F16B4326300850DC0 /* card_installyellowandpurpleandred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandpurpleandred.png; sourceTree = "<group>"; };
+		7943A73016B4326300850DC0 /* card_installyellowandredandblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandredandblue.png; sourceTree = "<group>"; };
+		7943A73116B4326300850DC0 /* card_installyellowandredandgreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandredandgreen.png; sourceTree = "<group>"; };
+		7943A73216B4326300850DC0 /* card_moveplusorminusthree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_moveplusorminusthree.png; sourceTree = "<group>"; };
+		7943A73316B4326300850DC0 /* card_peek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_peek.png; sourceTree = "<group>"; };
+		7943A73416B4326300850DC0 /* card_removeblueandmove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removeblueandmove.png; sourceTree = "<group>"; };
+		7943A73516B4326300850DC0 /* card_removeblueandplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removeblueandplay.png; sourceTree = "<group>"; };
+		7943A73616B4326300850DC0 /* card_removegreenandmove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removegreenandmove.png; sourceTree = "<group>"; };
+		7943A73716B4326300850DC0 /* card_removegreenandplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removegreenandplay.png; sourceTree = "<group>"; };
+		7943A73816B4326300850DC0 /* card_removepurpleandmove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removepurpleandmove.png; sourceTree = "<group>"; };
+		7943A73916B4326300850DC0 /* card_removepurpleandplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removepurpleandplay.png; sourceTree = "<group>"; };
+		7943A73A16B4326300850DC0 /* card_removeredandmove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removeredandmove.png; sourceTree = "<group>"; };
+		7943A73B16B4326300850DC0 /* card_removeredandplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removeredandplay.png; sourceTree = "<group>"; };
+		7943A73C16B4326300850DC0 /* card_removewild.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removewild.png; sourceTree = "<group>"; };
+		7943A73D16B4326300850DC0 /* card_removeyellowandmove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removeyellowandmove.png; sourceTree = "<group>"; };
+		7943A73E16B4326300850DC0 /* card_removeyellowandplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_removeyellowandplay.png; sourceTree = "<group>"; };
+		7943A76A16B4400B00850DC0 /* card_installyellowandgreenanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandgreenanddraw.png; sourceTree = "<group>"; };
+		7956456516B8B0F100C91950 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		7956456616B8B0F100C91950 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		795AB3991A1BD465006DFF95 /* UIDeckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeckView.h; sourceTree = "<group>"; };
+		795AB39A1A1BD465006DFF95 /* UIDeckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeckView.m; sourceTree = "<group>"; };
+		795AB39C1A1BD52A006DFF95 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
+		7967DE4E160FF2710015BFE6 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		7967DE4F160FF2710015BFE6 /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		7967DE50160FF2910015BFE6 /* Computer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Computer.h; sourceTree = "<group>"; };
+		7967DE51160FF2910015BFE6 /* Computer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Computer.m; sourceTree = "<group>"; };
+		7967DE52160FF2E70015BFE6 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		7967DE53160FF2E70015BFE6 /* Game.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		7967DE54160FF57D0015BFE6 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		7967DE55160FF57D0015BFE6 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		7967DE57160FF9080015BFE6 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		7967DE58160FF9080015BFE6 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		79820EE715D87F54004A008A /* Robolines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robolines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79820EEB15D87F54004A008A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79820EED15D87F54004A008A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79820EEF15D87F54004A008A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79820EF315D87F54004A008A /* Robolines-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Robolines-Info.plist"; sourceTree = "<group>"; };
+		79820EF715D87F54004A008A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79820EF915D87F54004A008A /* Robolines-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Robolines-Prefix.pch"; sourceTree = "<group>"; };
+		79820EFA15D87F54004A008A /* RoboAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoboAppDelegate.h; sourceTree = "<group>"; };
+		79820EFB15D87F54004A008A /* RoboAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoboAppDelegate.m; sourceTree = "<group>"; };
+		79820F0015D87F54004A008A /* RoboViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoboViewController.h; sourceTree = "<group>"; };
+		79820F0115D87F54004A008A /* RoboViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoboViewController.m; sourceTree = "<group>"; };
+		79901B4A1602B69A002790B6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		799428CF16BDCD4F00A443C3 /* metal_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metal_background.png; sourceTree = "<group>"; };
+		799428D116BDD3D300A443C3 /* PlayerSidebarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSidebarView.h; sourceTree = "<group>"; };
+		799428D216BDD3D300A443C3 /* PlayerSidebarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSidebarView.m; sourceTree = "<group>"; };
+		7994CC2B161F387700584E90 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		7994CC2C161F387700584E90 /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		7997B8E217471EFB007690B7 /* FrameModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameModalViewController.h; sourceTree = "<group>"; };
+		7997B8E317471EFB007690B7 /* FrameModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameModalViewController.m; sourceTree = "<group>"; };
+		7997F8B815EA606F0061C65D /* NewGameOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameOptionsViewController.h; sourceTree = "<group>"; };
+		7997F8B915EA606F0061C65D /* NewGameOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameOptionsViewController.m; sourceTree = "<group>"; };
+		799892E116796B2F00D1FC6A /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		799892E216796B2F00D1FC6A /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		7998935217D4FB1A007A40F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HandViewController.xib; sourceTree = "<group>"; };
+		799899BA15ED9B53006A8110 /* GameGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameGlobals.h; sourceTree = "<group>"; };
+		7998DE12162B86D900FAA92C /* CardAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardAction.h; sourceTree = "<group>"; };
+		7998DE13162B86D900FAA92C /* CardAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardAction.m; sourceTree = "<group>"; };
+		799914EA1619284500DE3A8B /* Space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Space.h; sourceTree = "<group>"; };
+		799914EB1619284500DE3A8B /* Space.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Space.m; sourceTree = "<group>"; };
+		799BC6411634B2BC0079E1CC /* cardslotbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardslotbackground.png; sourceTree = "<group>"; };
+		799DE44215F6EB490060AFA7 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		799DE44315F6EB490060AFA7 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		79A1F4D219040D2F00A025AE /* RoboPlayerCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboPlayerCreatorViewController.h; sourceTree = "<group>"; };
+		79A1F4D319040D2F00A025AE /* RoboPlayerCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboPlayerCreatorViewController.m; sourceTree = "<group>"; };
+		79A1F4D419040D2F00A025AE /* RoboPlayerCreatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoboPlayerCreatorViewController.xib; sourceTree = "<group>"; };
+		79A546B919B3E544000B52FA /* RoboFrameCardAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboFrameCardAction.h; sourceTree = "<group>"; };
+		79A546BA19B3E544000B52FA /* RoboFrameCardAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboFrameCardAction.m; sourceTree = "<group>"; };
+		79A546BC19B3E65F000B52FA /* RoboPeekCardAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboPeekCardAction.h; sourceTree = "<group>"; };
+		79A546BD19B3E65F000B52FA /* RoboPeekCardAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboPeekCardAction.m; sourceTree = "<group>"; };
+		79A58D08194BF0B5000F7644 /* NextPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextPlayerViewController.h; sourceTree = "<group>"; };
+		79A58D09194BF0B5000F7644 /* NextPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextPlayerViewController.m; sourceTree = "<group>"; };
+		79A58D0A194BF0B5000F7644 /* NextPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NextPlayerViewController.xib; sourceTree = "<group>"; };
+		79A89330184269A200492E31 /* RoboDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboDeck.h; sourceTree = "<group>"; };
+		79A89331184269A200492E31 /* RoboDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboDeck.m; sourceTree = "<group>"; };
+		79AC62FD1901EFDD00C0F864 /* RoboPartButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboPartButton.h; sourceTree = "<group>"; };
+		79AC62FE1901EFDD00C0F864 /* RoboPartButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboPartButton.m; sourceTree = "<group>"; };
+		79AE402B19B147B900129911 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		79B9E67419B36D63004A5F93 /* RoboCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboCard.h; sourceTree = "<group>"; };
+		79B9E67519B36D63004A5F93 /* RoboCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboCard.m; sourceTree = "<group>"; };
+		79BBBAD017680119009B5B7F /* HandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandViewController.h; sourceTree = "<group>"; };
+		79BBBAD117680119009B5B7F /* HandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandViewController.m; sourceTree = "<group>"; };
+		79F6077B175D79A2002B436E /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		79F6077C175D79A2002B436E /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79820EE415D87F54004A008A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79AE402C19B147B900129911 /* GameKit.framework in Frameworks */,
+				79820EEC15D87F54004A008A /* UIKit.framework in Frameworks */,
+				79820EEE15D87F54004A008A /* Foundation.framework in Frameworks */,
+				79820EF015D87F54004A008A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793352CC15EAF35D00FD5175 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				799428CF16BDCD4F00A443C3 /* metal_background.png */,
+				7943A76A16B4400B00850DC0 /* card_installyellowandgreenanddraw.png */,
+				7943A71516B4326300850DC0 /* card_cardBack.png */,
+				7943A71616B4326300850DC0 /* card_drawfive.png */,
+				7943A71716B4326300850DC0 /* card_frame.png */,
+				7943A71816B4326300850DC0 /* card_installblueanddraw.png */,
+				7943A71916B4326300850DC0 /* card_installblueandgreenanddraw.png */,
+				7943A71A16B4326300850DC0 /* card_installblueandpurpleanddraw.png */,
+				7943A71B16B4326300850DC0 /* card_installblueandredanddraw.png */,
+				7943A71C16B4326300850DC0 /* card_installblueandyellowanddraw.png */,
+				7943A71D16B4326300850DC0 /* card_installgreenanddraw.png */,
+				7943A71E16B4326300850DC0 /* card_installgreenandpurpleandblue.png */,
+				7943A71F16B4326300850DC0 /* card_installgreenandpurpleanddraw.png */,
+				7943A72016B4326300850DC0 /* card_installgreenandredandblue.png */,
+				7943A72116B4326300850DC0 /* card_installgreenandredandpurple.png */,
+				7943A72216B4326300850DC0 /* card_installpurpleanddraw.png */,
+				7943A72316B4326300850DC0 /* card_installredanddraw.png */,
+				7943A72416B4326300850DC0 /* card_installredandgreenanddraw.png */,
+				7943A72516B4326300850DC0 /* card_installredandpurpleandblue.png */,
+				7943A72616B4326300850DC0 /* card_installredandpurpleanddraw.png */,
+				7943A72716B4326300850DC0 /* card_installredandyellowanddraw.png */,
+				7943A72816B4326300850DC0 /* card_installwild.png */,
+				7943A72916B4326300850DC0 /* card_installwildandswap.png */,
+				7943A72A16B4326300850DC0 /* card_installyellowanddraw.png */,
+				7943A72B16B4326300850DC0 /* card_installyellowandgreenandblue.png */,
+				7943A72C16B4326300850DC0 /* card_installyellowandpurpleandblue.png */,
+				7943A72D16B4326300850DC0 /* card_installyellowandpurpleanddraw.png */,
+				7943A72E16B4326300850DC0 /* card_installyellowandpurpleandgreen.png */,
+				7943A72F16B4326300850DC0 /* card_installyellowandpurpleandred.png */,
+				7943A73016B4326300850DC0 /* card_installyellowandredandblue.png */,
+				7943A73116B4326300850DC0 /* card_installyellowandredandgreen.png */,
+				7943A73216B4326300850DC0 /* card_moveplusorminusthree.png */,
+				7943A73316B4326300850DC0 /* card_peek.png */,
+				7943A73416B4326300850DC0 /* card_removeblueandmove.png */,
+				7943A73516B4326300850DC0 /* card_removeblueandplay.png */,
+				7943A73616B4326300850DC0 /* card_removegreenandmove.png */,
+				7943A73716B4326300850DC0 /* card_removegreenandplay.png */,
+				7943A73816B4326300850DC0 /* card_removepurpleandmove.png */,
+				7943A73916B4326300850DC0 /* card_removepurpleandplay.png */,
+				7943A73A16B4326300850DC0 /* card_removeredandmove.png */,
+				7943A73B16B4326300850DC0 /* card_removeredandplay.png */,
+				7943A73C16B4326300850DC0 /* card_removewild.png */,
+				7943A73D16B4326300850DC0 /* card_removeyellowandmove.png */,
+				7943A73E16B4326300850DC0 /* card_removeyellowandplay.png */,
+				799BC6411634B2BC0079E1CC /* cardslotbackground.png */,
+				793352C115EAF2B900FD5175 /* cover.png */,
+				793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */,
+				793352C315EAF2B900FD5175 /* robolinesthumb.png */,
+				793352C415EAF2B900FD5175 /* Robot Frame.ai.jpg */,
+				793352C515EAF2B900FD5175 /* thumb-Card-back.ai.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		795DEDE918ECE408001B4DD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7967DE50160FF2910015BFE6 /* Computer.h */,
+				7967DE51160FF2910015BFE6 /* Computer.m */,
+				7967DE57160FF9080015BFE6 /* Deck.h */,
+				7967DE58160FF9080015BFE6 /* Deck.m */,
+				7994CC2B161F387700584E90 /* Board.h */,
+				7994CC2C161F387700584E90 /* Board.m */,
+				7967DE54160FF57D0015BFE6 /* Card.h */,
+				7967DE55160FF57D0015BFE6 /* Card.m */,
+				7998DE12162B86D900FAA92C /* CardAction.h */,
+				7998DE13162B86D900FAA92C /* CardAction.m */,
+				79A546B919B3E544000B52FA /* RoboFrameCardAction.h */,
+				79A546BA19B3E544000B52FA /* RoboFrameCardAction.m */,
+				7910B85F16063CB400121A68 /* Cards.xml */,
+				79A546BC19B3E65F000B52FA /* RoboPeekCardAction.h */,
+				79A546BD19B3E65F000B52FA /* RoboPeekCardAction.m */,
+				79B9E67419B36D63004A5F93 /* RoboCard.h */,
+				79B9E67519B36D63004A5F93 /* RoboCard.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		79820EDC15D87F54004A008A = {
+			isa = PBXGroup;
+			children = (
+				793352CD15EAF38E00FD5175 /* Default-Landscape~ipad.png */,
+				79820EF115D87F54004A008A /* Robolines */,
+				79820EEA15D87F54004A008A /* Frameworks */,
+				79820EE815D87F54004A008A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79820EE815D87F54004A008A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79820EE715D87F54004A008A /* Robolines.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79820EEA15D87F54004A008A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79AE402B19B147B900129911 /* GameKit.framework */,
+				79820EEB15D87F54004A008A /* UIKit.framework */,
+				79820EED15D87F54004A008A /* Foundation.framework */,
+				79820EEF15D87F54004A008A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79820EF115D87F54004A008A /* Robolines */ = {
+			isa = PBXGroup;
+			children = (
+				795DEDE918ECE408001B4DD5 /* Models */,
+				79A1F4D719040E0100A025AE /* CustomViews */,
+				799892E216796B2F00D1FC6A /* CardView.m */,
+				799892E116796B2F00D1FC6A /* CardView.h */,
+				79AC62FD1901EFDD00C0F864 /* RoboPartButton.h */,
+				79AC62FE1901EFDD00C0F864 /* RoboPartButton.m */,
+				7967DE52160FF2E70015BFE6 /* Game.h */,
+				7967DE53160FF2E70015BFE6 /* Game.m */,
+				799899BA15ED9B53006A8110 /* GameGlobals.h */,
+				799DE44215F6EB490060AFA7 /* GameViewController.h */,
+				799DE44315F6EB490060AFA7 /* GameViewController.m */,
+				79FEF3811944C51800877C34 /* Storyboards */,
+				79F6077B175D79A2002B436E /* ModalViewController.h */,
+				79F6077C175D79A2002B436E /* ModalViewController.m */,
+				7997F8B815EA606F0061C65D /* NewGameOptionsViewController.h */,
+				7997F8B915EA606F0061C65D /* NewGameOptionsViewController.m */,
+				7956456516B8B0F100C91950 /* OptionsViewController.h */,
+				7956456616B8B0F100C91950 /* OptionsViewController.m */,
+				7967DE4E160FF2710015BFE6 /* Player.h */,
+				7967DE4F160FF2710015BFE6 /* Player.m */,
+				799428D116BDD3D300A443C3 /* PlayerSidebarView.h */,
+				799428D216BDD3D300A443C3 /* PlayerSidebarView.m */,
+				793352CC15EAF35D00FD5175 /* Resources */,
+				79820EFA15D87F54004A008A /* RoboAppDelegate.h */,
+				79820EFB15D87F54004A008A /* RoboAppDelegate.m */,
+				79820F0015D87F54004A008A /* RoboViewController.h */,
+				79820F0115D87F54004A008A /* RoboViewController.m */,
+				799914EA1619284500DE3A8B /* Space.h */,
+				799914EB1619284500DE3A8B /* Space.m */,
+				79820EF215D87F54004A008A /* Supporting Files */,
+				79A89330184269A200492E31 /* RoboDeck.h */,
+				79A89331184269A200492E31 /* RoboDeck.m */,
+			);
+			path = Robolines;
+			sourceTree = "<group>";
+		};
+		79820EF215D87F54004A008A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79820EF315D87F54004A008A /* Robolines-Info.plist */,
+				79110E53162CF95400570A0B /* InfoPlist.strings */,
+				79820EF715D87F54004A008A /* main.m */,
+				79820EF915D87F54004A008A /* Robolines-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79A1F4D719040E0100A025AE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				79A1F4D219040D2F00A025AE /* RoboPlayerCreatorViewController.h */,
+				79A1F4D319040D2F00A025AE /* RoboPlayerCreatorViewController.m */,
+				79A1F4D419040D2F00A025AE /* RoboPlayerCreatorViewController.xib */,
+				79BBBACF1766B61A009B5B7F /* ModalViewsAndControllers */,
+				795AB3991A1BD465006DFF95 /* UIDeckView.h */,
+				795AB39A1A1BD465006DFF95 /* UIDeckView.m */,
+				795AB39C1A1BD52A006DFF95 /* UIConstants.h */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		79BBBACF1766B61A009B5B7F /* ModalViewsAndControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7997B8E217471EFB007690B7 /* FrameModalViewController.h */,
+				7997B8E317471EFB007690B7 /* FrameModalViewController.m */,
+				79131FFC175592DC00CE581F /* PartSelectorModalViewController.h */,
+				79131FFD175592DC00CE581F /* PartSelectorModalViewController.m */,
+				79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */,
+				790B06AB176411E90000D888 /* MoveNumberModalViewController.h */,
+				790B06AC176411E90000D888 /* MoveNumberModalViewController.m */,
+				790B06AD176411E90000D888 /* MoveNumberModalViewController.xib */,
+				79BBBAD017680119009B5B7F /* HandViewController.h */,
+				79BBBAD117680119009B5B7F /* HandViewController.m */,
+				7998935317D4FB1A007A40F3 /* HandViewController.xib */,
+				79A58D08194BF0B5000F7644 /* NextPlayerViewController.h */,
+				79A58D09194BF0B5000F7644 /* NextPlayerViewController.m */,
+				79A58D0A194BF0B5000F7644 /* NextPlayerViewController.xib */,
+			);
+			name = ModalViewsAndControllers;
+			sourceTree = "<group>";
+		};
+		79FEF3811944C51800877C34 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				79901B4A1602B69A002790B6 /* MainStoryboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79820EE615D87F54004A008A /* Robolines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79820F0515D87F54004A008A /* Build configuration list for PBXNativeTarget "Robolines" */;
+			buildPhases = (
+				79820EE315D87F54004A008A /* Sources */,
+				79820EE415D87F54004A008A /* Frameworks */,
+				79820EE515D87F54004A008A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Robolines;
+			productName = Robolines;
+			productReference = 79820EE715D87F54004A008A /* Robolines.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79820EDE15D87F54004A008A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Robo;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Benjamin Wishart";
+				TargetAttributes = {
+					79820EE615D87F54004A008A = {
+						DevelopmentTeam = 5B745E2Q5N;
+					};
+				};
+			};
+			buildConfigurationList = 79820EE115D87F54004A008A /* Build configuration list for PBXProject "Robolines" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79820EDC15D87F54004A008A;
+			productRefGroup = 79820EE815D87F54004A008A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79820EE615D87F54004A008A /* Robolines */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79820EE515D87F54004A008A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793352C615EAF2B900FD5175 /* cover.png in Resources */,
+				793352C715EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png in Resources */,
+				793352C815EAF2B900FD5175 /* robolinesthumb.png in Resources */,
+				793352C915EAF2B900FD5175 /* Robot Frame.ai.jpg in Resources */,
+				793352CA15EAF2B900FD5175 /* thumb-Card-back.ai.jpg in Resources */,
+				793352CE15EAF38E00FD5175 /* Default-Landscape~ipad.png in Resources */,
+				79901B4F1602B69B002790B6 /* MainStoryboard.storyboard in Resources */,
+				7910B86016063CB400121A68 /* Cards.xml in Resources */,
+				79110E54162CF95400570A0B /* InfoPlist.strings in Resources */,
+				799BC6421634B2BC0079E1CC /* cardslotbackground.png in Resources */,
+				7943A73F16B4326300850DC0 /* card_cardBack.png in Resources */,
+				7943A74016B4326300850DC0 /* card_drawfive.png in Resources */,
+				7943A74116B4326300850DC0 /* card_frame.png in Resources */,
+				7943A74216B4326300850DC0 /* card_installblueanddraw.png in Resources */,
+				7943A74316B4326300850DC0 /* card_installblueandgreenanddraw.png in Resources */,
+				7943A74416B4326300850DC0 /* card_installblueandpurpleanddraw.png in Resources */,
+				7943A74516B4326300850DC0 /* card_installblueandredanddraw.png in Resources */,
+				7943A74616B4326300850DC0 /* card_installblueandyellowanddraw.png in Resources */,
+				7943A74716B4326300850DC0 /* card_installgreenanddraw.png in Resources */,
+				7943A74816B4326300850DC0 /* card_installgreenandpurpleandblue.png in Resources */,
+				7943A74916B4326300850DC0 /* card_installgreenandpurpleanddraw.png in Resources */,
+				7943A74A16B4326300850DC0 /* card_installgreenandredandblue.png in Resources */,
+				7943A74B16B4326300850DC0 /* card_installgreenandredandpurple.png in Resources */,
+				7943A74C16B4326300850DC0 /* card_installpurpleanddraw.png in Resources */,
+				7943A74D16B4326300850DC0 /* card_installredanddraw.png in Resources */,
+				7943A74E16B4326300850DC0 /* card_installredandgreenanddraw.png in Resources */,
+				7943A74F16B4326300850DC0 /* card_installredandpurpleandblue.png in Resources */,
+				7943A75016B4326300850DC0 /* card_installredandpurpleanddraw.png in Resources */,
+				7943A75116B4326300850DC0 /* card_installredandyellowanddraw.png in Resources */,
+				7943A75216B4326300850DC0 /* card_installwild.png in Resources */,
+				7943A75316B4326300850DC0 /* card_installwildandswap.png in Resources */,
+				7943A75416B4326300850DC0 /* card_installyellowanddraw.png in Resources */,
+				7943A75516B4326300850DC0 /* card_installyellowandgreenandblue.png in Resources */,
+				7943A75616B4326300850DC0 /* card_installyellowandpurpleandblue.png in Resources */,
+				7943A75716B4326300850DC0 /* card_installyellowandpurpleanddraw.png in Resources */,
+				7943A75816B4326300850DC0 /* card_installyellowandpurpleandgreen.png in Resources */,
+				7943A75916B4326300850DC0 /* card_installyellowandpurpleandred.png in Resources */,
+				7943A75A16B4326300850DC0 /* card_installyellowandredandblue.png in Resources */,
+				7943A75B16B4326300850DC0 /* card_installyellowandredandgreen.png in Resources */,
+				7943A75C16B4326300850DC0 /* card_moveplusorminusthree.png in Resources */,
+				7943A75D16B4326300850DC0 /* card_peek.png in Resources */,
+				7943A75E16B4326300850DC0 /* card_removeblueandmove.png in Resources */,
+				7943A75F16B4326300850DC0 /* card_removeblueandplay.png in Resources */,
+				7943A76016B4326300850DC0 /* card_removegreenandmove.png in Resources */,
+				7943A76116B4326300850DC0 /* card_removegreenandplay.png in Resources */,
+				7943A76216B4326300850DC0 /* card_removepurpleandmove.png in Resources */,
+				7943A76316B4326300850DC0 /* card_removepurpleandplay.png in Resources */,
+				7943A76416B4326300850DC0 /* card_removeredandmove.png in Resources */,
+				7943A76516B4326300850DC0 /* card_removeredandplay.png in Resources */,
+				7943A76616B4326300850DC0 /* card_removewild.png in Resources */,
+				7943A76716B4326300850DC0 /* card_removeyellowandmove.png in Resources */,
+				7943A76816B4326300850DC0 /* card_removeyellowandplay.png in Resources */,
+				7943A76B16B4400B00850DC0 /* card_installyellowandgreenanddraw.png in Resources */,
+				79A58D0C194BF0B5000F7644 /* NextPlayerViewController.xib in Resources */,
+				799428D016BDCD4F00A443C3 /* metal_background.png in Resources */,
+				79132000175592DC00CE581F /* PartSelectorModalViewController.xib in Resources */,
+				790B06AF176411E90000D888 /* MoveNumberModalViewController.xib in Resources */,
+				79A1F4D619040D2F00A025AE /* RoboPlayerCreatorViewController.xib in Resources */,
+				7998935117D4FB1A007A40F3 /* HandViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79820EE315D87F54004A008A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A546BB19B3E544000B52FA /* RoboFrameCardAction.m in Sources */,
+				79820EF815D87F54004A008A /* main.m in Sources */,
+				79B9E67619B36D63004A5F93 /* RoboCard.m in Sources */,
+				79820EFC15D87F54004A008A /* RoboAppDelegate.m in Sources */,
+				79820F0215D87F54004A008A /* RoboViewController.m in Sources */,
+				7997F8BA15EA606F0061C65D /* NewGameOptionsViewController.m in Sources */,
+				799DE44415F6EB490060AFA7 /* GameViewController.m in Sources */,
+				7967DE56160FF57D0015BFE6 /* Card.m in Sources */,
+				79AC62FF1901EFDD00C0F864 /* RoboPartButton.m in Sources */,
+				7967DE59160FF9080015BFE6 /* Deck.m in Sources */,
+				799914EC1619284500DE3A8B /* Space.m in Sources */,
+				7994CC2D161F387700584E90 /* Board.m in Sources */,
+				7998DE14162B86D900FAA92C /* CardAction.m in Sources */,
+				79110E56162CFCEA00570A0B /* Game.m in Sources */,
+				79110E57162CFCF800570A0B /* Computer.m in Sources */,
+				79110E58162CFD1400570A0B /* Player.m in Sources */,
+				79A58D0B194BF0B5000F7644 /* NextPlayerViewController.m in Sources */,
+				799892E316796B2F00D1FC6A /* CardView.m in Sources */,
+				79A89332184269A200492E31 /* RoboDeck.m in Sources */,
+				7956456716B8B0F100C91950 /* OptionsViewController.m in Sources */,
+				799428D316BDD3D300A443C3 /* PlayerSidebarView.m in Sources */,
+				7997B8E417471EFB007690B7 /* FrameModalViewController.m in Sources */,
+				79A546BE19B3E65F000B52FA /* RoboPeekCardAction.m in Sources */,
+				795AB39B1A1BD465006DFF95 /* UIDeckView.m in Sources */,
+				79131FFF175592DC00CE581F /* PartSelectorModalViewController.m in Sources */,
+				79F6077D175D79A2002B436E /* ModalViewController.m in Sources */,
+				790B06AE176411E90000D888 /* MoveNumberModalViewController.m in Sources */,
+				79A1F4D519040D2F00A025AE /* RoboPlayerCreatorViewController.m in Sources */,
+				79BBBAD317680119009B5B7F /* HandViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7998935317D4FB1A007A40F3 /* HandViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7998935217D4FB1A007A40F3 /* en */,
+			);
+			name = HandViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79820F0315D87F54004A008A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		79820F0415D87F54004A008A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79820F0615D87F54004A008A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Robolines/Robolines-Prefix.pch";
+				INFOPLIST_FILE = "Robolines/Robolines-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		79820F0715D87F54004A008A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Robolines/Robolines-Prefix.pch";
+				INFOPLIST_FILE = "Robolines/Robolines-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79820EE115D87F54004A008A /* Build configuration list for PBXProject "Robolines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79820F0315D87F54004A008A /* Debug */,
+				79820F0415D87F54004A008A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79820F0515D87F54004A008A /* Build configuration list for PBXNativeTarget "Robolines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79820F0615D87F54004A008A /* Debug */,
+				79820F0715D87F54004A008A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79820EDE15D87F54004A008A /* Project object */;
+}

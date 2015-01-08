@@ -1,0 +1,692 @@
+<deck>
+    <card>
+        <title>Add Wild and Swap</title>
+        <actions>
+            <action group="2">
+                <type>Add</type>
+                <parts>
+                    <part>Wild</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Swap</type>
+                <number>2</number>
+            </action>
+        </actions>
+        <quantity>5</quantity>
+        <imagename>card_installwildandswap.png</imagename>
+    </card>
+    <card>
+        <title>Draw Five</title>
+        <actions>
+            <action group="1">
+                <type>Draw</type>
+                <number>5</number>
+            </action>
+        </actions>
+        <quantity>4</quantity>
+        <imagename>card_drawfive.png</imagename>
+    </card>
+    <card>
+        <title>Peek</title>
+        <actions>
+            <action group="2">
+                <type>Peek</type>
+            </action>
+        </actions>
+        <quantity>4</quantity>
+        <imagename>card_peek.png</imagename>
+    </card>
+    <card>
+        <title>Move</title>
+        <actions>
+            <action group="2">
+                <type>Move</type>
+                <number>3</number>
+            </action>
+            <action group="2">
+                <type>Move</type>
+                <number>2</number>
+            </action>
+            <action group="2">
+                <type>Move</type>
+                <number>1</number>
+            </action>
+            <action group="2">
+                <type>Move</type>
+                <number>-1</number>
+            </action>
+            <action group="2">
+                <type>Move</type>
+                <number>-2</number>
+            </action>
+            <action group="2">
+                <type>Move</type>
+                <number>-3</number>
+            </action>
+        </actions>
+        <quantity>5</quantity>
+        <imagename>card_moveplusorminusthree.png</imagename>
+    </card>
+    <card>
+        <title>Frame</title>
+        <actions>
+        	<action group="1">
+        		<type>Frame</type>
+        	</action>
+        </actions>
+        <quantity>15</quantity>
+        <imagename>card_frame.png</imagename>
+    </card>
+    <card>
+        <title>Add Wild</title>
+        <actions>
+            <action group="2">
+                <type>Add</type>
+                <parts>
+                    <part>Wild</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>3</quantity>
+        <imagename>card_installwild.png</imagename>
+    </card>
+    <card>
+        <title>Remove Wild</title>
+        <actions>
+            <action group="2">
+                <type>Remove</type>
+                <parts>
+                    <part>Wild</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>4</quantity>
+        <imagename>card_removewild.png</imagename>
+    </card>
+    <card>
+        <title>Remove Red and Play</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Play</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removeredandplay.png</imagename>
+    </card>
+    <card>
+        <title>Remove Blue and Play</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Blue</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Play</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removeblueandplay.png</imagename>
+    </card>
+    <card>
+        <title>Remove Green and Play</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Green</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Play</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removegreenandplay.png</imagename>
+    </card>
+    <card>
+        <title>Remove Yellow and Play</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Yellow</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Play</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removeyellowandplay.png</imagename>
+    </card>
+    <card>
+        <title>Remove Purple and Play</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Purple</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Play</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removepurpleandplay.png</imagename>
+    </card>
+	<card>
+        <title>Remove Red and Move Back</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Move</type>
+                <number>-2</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removeredandmove.png</imagename>
+    </card>
+    <card>
+        <title>Remove Blue and Move Back</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Blue</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Move</type>
+                <number>-2</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removeblueandmove.png</imagename>
+    </card>
+    <card>
+        <title>Remove Green and Move Back</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Green</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Move</type>
+                <number>-2</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removegreenandmove.png</imagename>
+    </card>
+    <card>
+        <title>Remove Yellow and Move Back</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Yellow</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Move</type>
+                <number>-2</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removeyellowandmove.png</imagename>
+    </card>
+    <card>
+        <title>Remove Purple and Move Back</title>
+        <actions>
+            <action group="1">
+                <type>Remove</type>
+                <parts>
+                    <part>Purple</part>
+                </parts>
+            </action>
+            <action group="2">
+                <type>Move</type>
+                <number>-2</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_removepurpleandmove.png</imagename>
+    </card>
+    <card>
+        <title>Add Yellow and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Yellow</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>2</number>
+            </action>
+        </actions>
+        <quantity>3</quantity>
+        <imagename>card_installyellowanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Red and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>2</number>
+            </action>
+        </actions>
+        <quantity>3</quantity>
+        <imagename>card_installredanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Blue and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Blue</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>2</number>
+            </action>
+        </actions>
+        <quantity>3</quantity>
+        <imagename>card_installblueanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Purple and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Purple</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>2</number>
+            </action>
+        </actions>
+        <quantity>3</quantity>
+        <imagename>card_installpurpleanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Green and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>2</number>
+            </action>
+        </actions>
+        <quantity>3</quantity>
+        <imagename>card_installgreenanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Yellow and Red and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Yellow</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installredandyellowanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Yellow and Blue and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Yellow</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installblueandyellowanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Yellow and Green and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Yellow</part>
+                    <part>Green</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions> 
+        <quantity>2</quantity>
+        <imagename>card_installyellowandgreenanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Yellow and Purple and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Yellow</part>
+                    <part>Purple</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installyellowandpurpleanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Red and Blue and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Blue</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installblueandredanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Red and Green and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installredandgreenanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Red and Purple and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Purple</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installredandpurpleanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Blue and Green and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installblueandgreenanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Blue and Purple and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Blue</part>
+                    <part>Purple</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installblueandpurpleanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Green and Purple and Draw</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Purple</part>
+                </parts>
+            </action>
+            <action group="1">
+                <type>Draw</type>
+                <number>1</number>
+            </action>
+        </actions>
+        <quantity>2</quantity>
+        <imagename>card_installgreenandpurpleanddraw.png</imagename>
+    </card>
+    <card>
+        <title>Add Green, Purple, and Yellow</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Purple</part>
+                    <part>Yellow</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installyellowandpurpleandgreen.png</imagename>
+    </card>
+    <card>
+        <title>Add Green, Purple, and Red</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Purple</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installgreenandredandpurple.png</imagename>
+    </card>
+    <card>
+        <title>Add Green, Purple, and Blue</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Purple</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installgreenandpurpleandblue.png</imagename>
+    </card>
+    <card>
+        <title>Add Green, Yellow, and Blue</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Yellow</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installyellowandgreenandblue.png</imagename>
+    </card>
+    <card>
+        <title>Add Green, Red, and Blue</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Red</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installgreenandredandblue.png</imagename>
+    </card>
+    <card>
+        <title>Add Green, Yellow, and Red</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Green</part>
+                    <part>Yellow</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installyellowandredandgreen.png</imagename>
+    </card>
+    <card>
+        <title>Add Blue, Yellow, and Red</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Blue</part>
+                    <part>Yellow</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installyellowandredandblue.png</imagename>
+    </card>
+    <card>
+        <title>Add Purple, Yellow, and Blue</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Purple</part>
+                    <part>Yellow</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installyellowandpurpleandblue.png</imagename>
+    </card>
+    <card>
+        <title>Add Purple, Red, and Blue</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Purple</part>
+                    <part>Red</part>
+                    <part>Blue</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installredandpurpleandblue.png</imagename>
+    </card>
+    <card>
+        <title>Add Purple, Yellow, and Red</title>
+        <actions>
+            <action group="1">
+                <type>Add</type>
+                <parts>
+                    <part>Purple</part>
+                    <part>Yellow</part>
+                    <part>Red</part>
+                </parts>
+            </action>
+        </actions>
+        <quantity>1</quantity>
+        <imagename>card_installyellowandpurpleandred.png</imagename>
+    </card>
+</deck>

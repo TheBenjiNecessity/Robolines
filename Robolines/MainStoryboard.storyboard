@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HsT-I2-fjA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Robolines-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="RoboViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A5e-E5-Ktm"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ff-h4-qXT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-57-iaC">
+                                <rect key="frame" x="448" y="240" width="128" height="37"/>
+                                <state key="normal" title="New">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YEK-bo-veg" kind="push" id="eYS-Gj-jvs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egH-oV-HrK">
+                                <rect key="frame" x="448" y="284" width="128" height="37"/>
+                                <state key="normal" title="Options">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="F6U-50-01W" kind="push" id="OhQ-Dv-qHp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxj-b1-rOM">
+                                <rect key="frame" x="455" y="329" width="114" height="30"/>
+                                <state key="normal" title="Rules &amp; Tutorials">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yIh-Tv-fD1" kind="push" id="X97-jK-mHE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Robolines" id="dqX-PZ-qe3"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="-59"/>
+        </scene>
+        <!--New Game Options-->
+        <scene sceneID="pGr-eF-5Ow">
+            <objects>
+                <viewController storyboardIdentifier="newgameoptions" title="New Game Options" id="YEK-bo-veg" customClass="NewGameOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="co8-2F-DzG"/>
+                        <viewControllerLayoutGuide type="bottom" id="sMN-1k-5LC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RAK-vf-2Wy">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfz-OL-2Oq">
+                                <rect key="frame" x="20" y="711" width="72" height="37"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Back:" destination="YEK-bo-veg" eventType="touchUpInside" id="AlW-hj-erq"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" tag="60" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U3R-4a-kih">
+                                <rect key="frame" x="756" y="717" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Random Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Loo-7o-Ib8">
+                                <rect key="frame" x="727" y="692" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s4-kQ-0Rc">
+                                <rect key="frame" x="476" y="711" width="72" height="37"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsu-zM-NzK">
+                                <rect key="frame" x="932" y="711" width="72" height="37"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="YEK-bo-veg" eventType="touchUpInside" id="NVx-qq-WCU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Game" id="Axr-La-3oS"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="randomStart" destination="U3R-4a-kih" id="TYo-G1-x7E"/>
+                        <outlet property="view" destination="RAK-vf-2Wy" id="nlL-RJ-KRI"/>
+                        <segue destination="xfy-EF-COq" kind="push" identifier="pushToGameFromConfigure" id="1fd-SB-otP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8k-Ew-niJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="-369"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="jVp-DT-bll">
+            <objects>
+                <viewController id="F6U-50-01W" customClass="OptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4a3-vz-clG"/>
+                        <viewControllerLayoutGuide type="bottom" id="vVu-o8-TnZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RRI-me-Rer">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXr-I4-jDp">
+                                <rect key="frame" x="20" y="712" width="72" height="37"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Back:" destination="YEK-bo-veg" eventType="touchUpInside" id="pmd-KJ-H6d"/>
+                                    <action selector="back:" destination="F6U-50-01W" eventType="touchUpInside" id="G7W-1u-VLh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mFQ-To-I9x"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="back" destination="ZXr-I4-jDp" id="Tqf-Iw-QkQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgD-n3-BZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="496"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tap-db-imL">
+            <objects>
+                <viewController id="yIh-Tv-fD1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQF-WU-Hgr"/>
+                        <viewControllerLayoutGuide type="bottom" id="cG8-fD-dkY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yeu-4R-pSE">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1E8-MX-7cr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cF5-6a-PX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="1372"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="LIa-sb-z14">
+            <objects>
+                <viewController id="xfy-EF-COq" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BjQ-te-7BG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qer-yH-jMe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jYI-St-lve">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="metal_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2pK-ba-9sI">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkX-Tf-NLb">
+                                <rect key="frame" x="20" y="711" width="72" height="37"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Back:" destination="xfy-EF-COq" eventType="touchUpInside" id="njO-YN-Faj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ST6-kS-Ldy"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxb-oe-4oQ">
+                                <rect key="frame" x="445" y="711" width="135" height="37"/>
+                                <state key="normal" title="Hand">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ToggleHand:" destination="xfy-EF-COq" eventType="touchUpInside" id="ukM-aQ-v8C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wbp-fY-Jyf"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="cardDraggingRecognizer" destination="T0b-IF-OwD" id="gRc-b2-DT1"/>
+                        <outlet property="cardSelectTapGestureRecognizer" destination="1Xe-C9-0gv" id="Wbf-3A-V5u"/>
+                        <outlet property="playCardDraggingRecognizer" destination="Hox-eX-F1Y" id="IBo-el-nrw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOi-XQ-mrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1Xe-C9-0gv">
+                    <connections>
+                        <action selector="tapDownHand:" destination="xfy-EF-COq" id="4IC-AM-ngb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="T0b-IF-OwD"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Hox-eX-F1Y"/>
+            </objects>
+            <point key="canvasLocation" x="3375" y="-369"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iZS-XA-7Z9">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="HsT-I2-fjA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MOn-v9-C9b">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="HfK-aA-4Pv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0a-0D-5Bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="-59"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="metal_background.png" width="2048" height="1536"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
