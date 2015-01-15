@@ -11,14 +11,26 @@
 @implementation CardView
 
 @synthesize card;
-@synthesize origin;
 
+- (id)initWithPosition:(CGPoint)position cardOrNil:(Card *)c
+{
+    self = [super initWithFrame:CGRectMake(position.x, position.y,  SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+    if (self) {
+        // Initialization code
+        card = c;
+        if (card == nil)
+            [self setImage:[RoboUISlotView cardSlotImage]];
+    }
+    return self;
+}
+
+/*
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        //[self setImageFromFileName:@"cardslotbackground.png"];
+        [self setImage:[RoboUISlotView cardSlotImage]];
     }
     return self;
 }
@@ -27,69 +39,61 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self){
-        //[self setImageFromFileName:@"cardslotbackground.png"];
+
     }
     
     return self;
 }
-
--(id)initWithCard:(Card *)c;
-{
-    self = [super init];
-    if (self)
-    {
-        card = c;
-    }
-    return self;
-}
-
--(void)setState:(State)state
-{
-    switch (state) {
-        case EMPTY:
-
-            break;
-            
-        default:
-            break;
-    }
-}
+*/
                           
-+(void)cardBackImage
+//+(UIImage *)cardBackImage
+//{
+//    UIImage *cardBack = nil;
+//    
+//    if (cardBack == nil)
+//    {
+//        //cardBack = [UIImage imageWithContentsOfFile:@"card_cardBack.png"];
+//        
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardBack" ofType:@"png"];
+//        
+//        NSData *data = [NSData dataWithContentsOfFile:path];
+//        
+//        cardBack = [UIImage imageWithData:data];
+//    }
+//    
+//    return cardBack;
+//}
+//
+//+(UIImage *)cardSlotImage
+//{
+//    UIImage *cardSlot = nil;
+//    
+//    if (cardSlot == nil)
+//    {
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardSlot" ofType:@"png"];
+//        
+//        NSData *data = [NSData dataWithContentsOfFile:path];
+//        
+//        cardSlot = [UIImage imageWithData:data];
+//    }
+//    
+//    return cardSlot;
+//}
+
+
+-(void)setCard:(Card *) c
 {
-    UIImage *cardBack = nil;
+    card = c;
     
-    if (cardBack == nil)
-    {
-        cardBack = [UIImage imageWithContentsOfFile:@"card_cardBack.png"];
-    }
-    
-    image = cardBack;
+    NSString *path = [[NSBundle mainBundle] pathForResource:[card filename] ofType:@"png"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    [self setImage:[UIImage imageWithData:data]];
 }
 
-+(void)cardSlotImage
+-(void)removeCard
 {
-    UIImage *cardBack = nil;
-    
-    if (cardBack == nil)
-    {
-        cardBack = [UIImage imageWithContentsOfFile:@"card_cardSlot.png"];
-    }
-    
-    return cardBack;
-}
-
-
--(void)setCard: (Card *) c withImage: (UIImage *)image
-{
-    [self setCard:c];
-    [self setImage:image];
-}
-
--(void)setImageFromFileName: (NSString *)filename
-{
-    //self.image = [[UIImage alloc] initWithContentsOfFile:filename];
-    self.image = [UIImage imageNamed:filename];
+    [self setCard:nil];
+    [self setImage:[RoboUISlotView cardSlotImage]];
 }
 
 /*

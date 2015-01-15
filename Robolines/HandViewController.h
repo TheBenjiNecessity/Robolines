@@ -11,6 +11,7 @@
 #import "Card.h"
 #import "CardView.h"
 #import "ModalViewController.h"
+#import "UIConstants.h"
 
 #define HAND_VIEW_UP_CENTER         374.0
 #define HAND_VIEW_CARD_MARGIN       10.0

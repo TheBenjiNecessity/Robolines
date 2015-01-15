@@ -120,15 +120,15 @@
     return false;
 }
 
--(BOOL)addPart:(NSNumber *)part toFrameAtColumn:(int)column
-{
-    return [self hasFrameAtColumn:column] && [[framesRow objectAtIndex:column] addPart:part];
-}
-
--(BOOL)removePart:(NSNumber *)part toFrameAtColumn:(int)column
-{
-    return [self hasFrameAtColumn:column] && [[framesRow objectAtIndex:column] removePart:part];
-}
+//-(BOOL)addPart:(NSNumber *)part toFrameAtColumn:(int)column
+//{
+//    return [self hasFrameAtColumn:column] && [[framesRow objectAtIndex:column] addPart:part];
+//}
+//
+//-(BOOL)removePart:(NSNumber *)part toFrameAtColumn:(int)column
+//{
+//    return [self hasFrameAtColumn:column] && [[framesRow objectAtIndex:column] removePart:part];
+//}
 
 -(BOOL)frameisFullAtColumn:(int)column
 {

@@ -15,6 +15,8 @@
     NSString *_filename;
 }
 
+@property (nonatomic) NSString *filename;
+
 +(UIImage *)cardBackImage;
 
 -(id)initWithImageFileName:(NSString *)filename;

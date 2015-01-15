@@ -18,7 +18,7 @@
 #define MEDIUM_CARD_IMAGE_WIDTH       192.0
 #define MEDIUM_CARD_IMAGE_HEIGHT      256.0
 
-#define SMALL_CARD_IMAGE_WIDTH        0.0
-#define SMALL_CARD_IMAGE_HEIGHT       0.0
+#define SMALL_CARD_IMAGE_WIDTH        96.0
+#define SMALL_CARD_IMAGE_HEIGHT       128.0
 
 #endif

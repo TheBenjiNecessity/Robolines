@@ -18,12 +18,14 @@
 #import "MoveNumberModalViewController.h"
 #import "NextPlayerViewController.h"
 #import "PartSelectorModalViewController.h"
+#import "UIConstants.h"
+#import "DeckView.h"
 
-typedef enum
-{
-    ADDPARTS,
-    REMOVEPARTS
-}State;
+//typedef enum
+//{
+//    ADDPARTS,
+//    REMOVEPARTS
+//}State;
 
 @interface GameViewController : UIViewController <NextPlayerDelegate>
 {
@@ -61,6 +63,7 @@ typedef enum
 @property (strong, nonatomic, retain) NSArray *framesRow;
 @property (strong, nonatomic, retain) NSArray *boardRows;
 @property (strong, nonatomic, retain) NSArray *playerSidebarViews;
+@property (strong, nonatomic, retain) DeckView *deckView;
 
 @property (strong, nonatomic, retain) PartSelectorModalViewController *psmvc;
 @property (strong, nonatomic, retain) NextPlayerViewController *npvc;

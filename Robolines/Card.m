@@ -27,7 +27,11 @@
     
     if (cardBack == nil)
     {
-        cardBack = [UIImage imageWithContentsOfFile:@"card_cardBack.png"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardBack" ofType:@"png"];
+        
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        
+        cardBack = [UIImage imageWithData:data];
     }
     
     return cardBack;
@@ -37,7 +41,11 @@
 {
     if (cardImage == nil)
     {
-        cardImage = [UIImage imageWithContentsOfFile:_filename];
+        NSString *path = [[NSBundle mainBundle] pathForResource:_filename ofType:@"png"];
+        
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        
+        cardImage = [UIImage imageWithData:data];
     }
     
     return cardImage;

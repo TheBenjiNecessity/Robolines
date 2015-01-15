@@ -16,6 +16,7 @@
 		79110E58162CFD1400570A0B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE4F160FF2710015BFE6 /* Player.m */; };
 		79131FFF175592DC00CE581F /* PartSelectorModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79131FFD175592DC00CE581F /* PartSelectorModalViewController.m */; };
 		79132000175592DC00CE581F /* PartSelectorModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */; };
+		792F1A801A66FA430008A6AE /* RoboUISlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792F1A7F1A66FA430008A6AE /* RoboUISlotView.m */; };
 		793352C615EAF2B900FD5175 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C115EAF2B900FD5175 /* cover.png */; };
 		793352C715EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */; };
 		793352C815EAF2B900FD5175 /* robolinesthumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C315EAF2B900FD5175 /* robolinesthumb.png */; };
@@ -66,7 +67,7 @@
 		7943A76816B4326300850DC0 /* card_removeyellowandplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A73E16B4326300850DC0 /* card_removeyellowandplay.png */; };
 		7943A76B16B4400B00850DC0 /* card_installyellowandgreenanddraw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7943A76A16B4400B00850DC0 /* card_installyellowandgreenanddraw.png */; };
 		7956456716B8B0F100C91950 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7956456616B8B0F100C91950 /* OptionsViewController.m */; };
-		795AB39B1A1BD465006DFF95 /* UIDeckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39A1A1BD465006DFF95 /* UIDeckView.m */; };
+		795AB39B1A1BD465006DFF95 /* DeckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39A1A1BD465006DFF95 /* DeckView.m */; };
 		7967DE56160FF57D0015BFE6 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE55160FF57D0015BFE6 /* Card.m */; };
 		7967DE59160FF9080015BFE6 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967DE58160FF9080015BFE6 /* Deck.m */; };
 		79820EEC15D87F54004A008A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79820EEB15D87F54004A008A /* UIKit.framework */; };
@@ -85,7 +86,7 @@
 		7998935117D4FB1A007A40F3 /* HandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7998935317D4FB1A007A40F3 /* HandViewController.xib */; };
 		7998DE14162B86D900FAA92C /* CardAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998DE13162B86D900FAA92C /* CardAction.m */; };
 		799914EC1619284500DE3A8B /* Space.m in Sources */ = {isa = PBXBuildFile; fileRef = 799914EB1619284500DE3A8B /* Space.m */; };
-		799BC6421634B2BC0079E1CC /* cardslotbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 799BC6411634B2BC0079E1CC /* cardslotbackground.png */; };
+		799BC6421634B2BC0079E1CC /* card_cardSlot.png in Resources */ = {isa = PBXBuildFile; fileRef = 799BC6411634B2BC0079E1CC /* card_cardSlot.png */; };
 		799DE44415F6EB490060AFA7 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DE44315F6EB490060AFA7 /* GameViewController.m */; };
 		79A1F4D519040D2F00A025AE /* RoboPlayerCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A1F4D319040D2F00A025AE /* RoboPlayerCreatorViewController.m */; };
 		79A1F4D619040D2F00A025AE /* RoboPlayerCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A1F4D419040D2F00A025AE /* RoboPlayerCreatorViewController.xib */; };
@@ -110,6 +111,8 @@
 		79131FFC175592DC00CE581F /* PartSelectorModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartSelectorModalViewController.h; sourceTree = "<group>"; };
 		79131FFD175592DC00CE581F /* PartSelectorModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartSelectorModalViewController.m; sourceTree = "<group>"; };
 		79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PartSelectorModalViewController.xib; sourceTree = "<group>"; };
+		792F1A7E1A66FA430008A6AE /* RoboUISlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUISlotView.h; sourceTree = "<group>"; };
+		792F1A7F1A66FA430008A6AE /* RoboUISlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboUISlotView.m; sourceTree = "<group>"; };
 		793352C115EAF2B900FD5175 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = ../../../../Pictures/RobolinesPics/cover.png; sourceTree = "<group>"; };
 		793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Robolines_iPad_Splashscreen.png; path = ../../../../Pictures/RobolinesPics/Robolines_iPad_Splashscreen.png; sourceTree = "<group>"; };
 		793352C315EAF2B900FD5175 /* robolinesthumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robolinesthumb.png; path = ../../../../Pictures/RobolinesPics/robolinesthumb.png; sourceTree = "<group>"; };
@@ -161,8 +164,8 @@
 		7943A76A16B4400B00850DC0 /* card_installyellowandgreenanddraw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_installyellowandgreenanddraw.png; sourceTree = "<group>"; };
 		7956456516B8B0F100C91950 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		7956456616B8B0F100C91950 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
-		795AB3991A1BD465006DFF95 /* UIDeckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeckView.h; sourceTree = "<group>"; };
-		795AB39A1A1BD465006DFF95 /* UIDeckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeckView.m; sourceTree = "<group>"; };
+		795AB3991A1BD465006DFF95 /* DeckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckView.h; sourceTree = "<group>"; };
+		795AB39A1A1BD465006DFF95 /* DeckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckView.m; sourceTree = "<group>"; };
 		795AB39C1A1BD52A006DFF95 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
 		7967DE4E160FF2710015BFE6 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7967DE4F160FF2710015BFE6 /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
@@ -203,7 +206,7 @@
 		7998DE13162B86D900FAA92C /* CardAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardAction.m; sourceTree = "<group>"; };
 		799914EA1619284500DE3A8B /* Space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Space.h; sourceTree = "<group>"; };
 		799914EB1619284500DE3A8B /* Space.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Space.m; sourceTree = "<group>"; };
-		799BC6411634B2BC0079E1CC /* cardslotbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardslotbackground.png; sourceTree = "<group>"; };
+		799BC6411634B2BC0079E1CC /* card_cardSlot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_cardSlot.png; sourceTree = "<group>"; };
 		799DE44215F6EB490060AFA7 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		799DE44315F6EB490060AFA7 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		79A1F4D219040D2F00A025AE /* RoboPlayerCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboPlayerCreatorViewController.h; sourceTree = "<group>"; };
@@ -291,7 +294,7 @@
 				7943A73C16B4326300850DC0 /* card_removewild.png */,
 				7943A73D16B4326300850DC0 /* card_removeyellowandmove.png */,
 				7943A73E16B4326300850DC0 /* card_removeyellowandplay.png */,
-				799BC6411634B2BC0079E1CC /* cardslotbackground.png */,
+				799BC6411634B2BC0079E1CC /* card_cardSlot.png */,
 				793352C115EAF2B900FD5175 /* cover.png */,
 				793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */,
 				793352C315EAF2B900FD5175 /* robolinesthumb.png */,
@@ -364,6 +367,8 @@
 				79AC62FD1901EFDD00C0F864 /* RoboPartButton.h */,
 				79AC62FE1901EFDD00C0F864 /* RoboPartButton.m */,
 				7967DE52160FF2E70015BFE6 /* Game.h */,
+				792F1A7E1A66FA430008A6AE /* RoboUISlotView.h */,
+				792F1A7F1A66FA430008A6AE /* RoboUISlotView.m */,
 				7967DE53160FF2E70015BFE6 /* Game.m */,
 				799899BA15ED9B53006A8110 /* GameGlobals.h */,
 				799DE44215F6EB490060AFA7 /* GameViewController.h */,
@@ -411,8 +416,8 @@
 				79A1F4D319040D2F00A025AE /* RoboPlayerCreatorViewController.m */,
 				79A1F4D419040D2F00A025AE /* RoboPlayerCreatorViewController.xib */,
 				79BBBACF1766B61A009B5B7F /* ModalViewsAndControllers */,
-				795AB3991A1BD465006DFF95 /* UIDeckView.h */,
-				795AB39A1A1BD465006DFF95 /* UIDeckView.m */,
+				795AB3991A1BD465006DFF95 /* DeckView.h */,
+				795AB39A1A1BD465006DFF95 /* DeckView.m */,
 				795AB39C1A1BD52A006DFF95 /* UIConstants.h */,
 			);
 			name = CustomViews;
@@ -513,7 +518,7 @@
 				79901B4F1602B69B002790B6 /* MainStoryboard.storyboard in Resources */,
 				7910B86016063CB400121A68 /* Cards.xml in Resources */,
 				79110E54162CF95400570A0B /* InfoPlist.strings in Resources */,
-				799BC6421634B2BC0079E1CC /* cardslotbackground.png in Resources */,
+				799BC6421634B2BC0079E1CC /* card_cardSlot.png in Resources */,
 				7943A73F16B4326300850DC0 /* card_cardBack.png in Resources */,
 				7943A74016B4326300850DC0 /* card_drawfive.png in Resources */,
 				7943A74116B4326300850DC0 /* card_frame.png in Resources */,
@@ -595,8 +600,9 @@
 				7956456716B8B0F100C91950 /* OptionsViewController.m in Sources */,
 				799428D316BDD3D300A443C3 /* PlayerSidebarView.m in Sources */,
 				7997B8E417471EFB007690B7 /* FrameModalViewController.m in Sources */,
+				792F1A801A66FA430008A6AE /* RoboUISlotView.m in Sources */,
 				79A546BE19B3E65F000B52FA /* RoboPeekCardAction.m in Sources */,
-				795AB39B1A1BD465006DFF95 /* UIDeckView.m in Sources */,
+				795AB39B1A1BD465006DFF95 /* DeckView.m in Sources */,
 				79131FFF175592DC00CE581F /* PartSelectorModalViewController.m in Sources */,
 				79F6077D175D79A2002B436E /* ModalViewController.m in Sources */,
 				790B06AE176411E90000D888 /* MoveNumberModalViewController.m in Sources */,

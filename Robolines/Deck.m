@@ -12,6 +12,7 @@
 @implementation Deck
 
 @synthesize cards;
+@synthesize delegate;
 
 -(id) init
 {
@@ -92,8 +93,6 @@
     if ([elementName isEqualToString:@"card"])
     {
         //ending the card
-//        [tempCard setImageFileName:[tempCard.imageFileName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-//        [tempCard setTitle:[tempCard.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
         for (int i = 0; i < quantity; i++)
             [self addCard:tempCard];
         

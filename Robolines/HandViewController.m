@@ -34,7 +34,7 @@
     NSLog(@"setup hand for player");
     //[self animateOutToSide:[NSNumber numberWithInt:BOTTOM]];
     int playerHandCount = player.hand.count;
-    [HandView setContentSize:CGSizeMake((CARD_IMAGE_WIDTH/2 + HAND_VIEW_CARD_MARGIN) * playerHandCount, HandView.frame.size.height)];
+    [HandView setContentSize:CGSizeMake((MEDIUM_CARD_IMAGE_WIDTH/2 + HAND_VIEW_CARD_MARGIN) * playerHandCount, HandView.frame.size.height)];
 
     NSArray *viewsToRemove = [HandView subviews];
     for (UIView *view in viewsToRemove)
@@ -44,8 +44,8 @@
     
     HandCardViews = [[NSMutableArray alloc] init];
     for (int i = 0; i < playerHandCount; i++) {
-        CGFloat xorigin = i * (CARD_IMAGE_WIDTH/2 + HAND_VIEW_CARD_MARGIN);
-        CardView *cv = [[CardView alloc] initWithFrame:CGRectMake(xorigin, 0.0, CARD_IMAGE_WIDTH/2, CARD_IMAGE_HEIGHT/2)];
+        CGFloat xorigin = i * (MEDIUM_CARD_IMAGE_WIDTH/2 + HAND_VIEW_CARD_MARGIN);
+        CardView *cv = [[CardView alloc] initWithFrame:CGRectMake(xorigin, 0.0, MEDIUM_CARD_IMAGE_WIDTH/2, MEDIUM_CARD_IMAGE_HEIGHT/2)];
         Card *currentCard = [player.hand objectAtIndex:i];
         [cv setCard:currentCard];
         //[cv setImageFromFileName:currentCard.imageFileName];

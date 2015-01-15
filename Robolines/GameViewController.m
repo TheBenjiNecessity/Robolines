@@ -43,6 +43,7 @@
 @synthesize framesRow;
 @synthesize boardRows;
 @synthesize playerSidebarViews;
+@synthesize deckView;
 
 @synthesize psmvc;
 @synthesize npvc;
@@ -70,7 +71,9 @@
     NSMutableArray *frameSlots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
     for (int i = 0; i < NUM_COLUMNS; i++)
     {
-        CardView *frameslot = [[CardView alloc] initWithFrame:CGRectMake((i * (CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN, CARD_IMAGE_WIDTH/2, CARD_IMAGE_HEIGHT/2)];
+        CardView *frameslot = [[CardView alloc] initWithPosition:CGPointMake((i * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN) cardOrNil:nil];
+        
+        //CardView *frameslot = [[CardView alloc] initWithFrame:CGRectMake((i * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN, MEDIUM_CARD_IMAGE_WIDTH/2, MEDIUM_CARD_IMAGE_HEIGHT/2)];
         
         [frameSlots addObject:frameslot];
         
@@ -85,10 +88,13 @@
         NSMutableArray *slots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
         for (int column = 0; column < NUM_COLUMNS; column++)
         {
-            CardView *slot = [[CardView alloc] initWithFrame:CGRectMake((column * (CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
-                                                                        (row * CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN),
-                                                                        CARD_IMAGE_WIDTH/2,
-                                                                        CARD_IMAGE_HEIGHT/2)];
+            CardView *slot = [[CardView alloc] initWithPosition:CGPointMake((column * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
+                                                                            (row * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) cardOrNil:nil];
+            
+            //CardView *slot = [[CardView alloc] initWithFrame:CGRectMake((column * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
+                                                                        //(row * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN),
+                                                                        //MEDIUM_CARD_IMAGE_WIDTH/2,
+                                                                        //MEDIUM_CARD_IMAGE_HEIGHT/2)];
             
             [slots addObject:slot];
             
@@ -97,6 +103,11 @@
         [rows addObject:slots];
     }
     boardRows = [[NSArray alloc] initWithArray:rows];
+    
+    deckView = [[DeckView alloc] initWithPosition:CGPointMake((-1.0 * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
+                                                                    (1.0 * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) deckOrNil:game.deck];
+    
+    [self.view addSubview:deckView];
     
     selectedCardView = [[CardView alloc] init];
     [self.view addSubview:selectedCardView];
@@ -259,12 +270,12 @@
 -(CardView *)viewAtSelectedPoint:(CGPoint)pointToPlaceSelectedCard //this methods is called outside with a width and height of the screen
 {
     if (pointToPlaceSelectedCard.x >= VIEW_SIDE_MARGIN && pointToPlaceSelectedCard.x <= (1024.0 - VIEW_SIDE_MARGIN)//if the point is in the frames row
-        && pointToPlaceSelectedCard.y >= VIEW_TOP_MARGIN && pointToPlaceSelectedCard.y <= (VIEW_TOP_MARGIN + CARD_IMAGE_HEIGHT/2))
+        && pointToPlaceSelectedCard.y >= VIEW_TOP_MARGIN && pointToPlaceSelectedCard.y <= (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2))
     {
         return [self viewInFramesRowAtSelectedPoint:pointToPlaceSelectedCard];
     }
-    else if (pointToPlaceSelectedCard.x >= VIEW_SIDE_MARGIN && pointToPlaceSelectedCard.x <= (1024.0 - VIEW_SIDE_MARGIN) && pointToPlaceSelectedCard.y >= (VIEW_TOP_MARGIN + CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)
-             && pointToPlaceSelectedCard.y <= (VIEW_TOP_MARGIN + CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN + (CARD_IMAGE_HEIGHT * 2)))//if the point is in one of the board rows
+    else if (pointToPlaceSelectedCard.x >= VIEW_SIDE_MARGIN && pointToPlaceSelectedCard.x <= (1024.0 - VIEW_SIDE_MARGIN) && pointToPlaceSelectedCard.y >= (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)
+             && pointToPlaceSelectedCard.y <= (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN + (MEDIUM_CARD_IMAGE_HEIGHT * 2)))//if the point is in one of the board rows
     {
         return [self viewInBoardRowsAtSelectedPoint:pointToPlaceSelectedCard];
     }
@@ -276,7 +287,7 @@
 
 -(CardView *)viewInFramesRowAtSelectedPoint:(CGPoint)point
 {
-    int index = (int)((point.x - VIEW_SIDE_MARGIN) / (CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN));
+    int index = (int)((point.x - VIEW_SIDE_MARGIN) / (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN));
     if (index >= 0 && index < NUM_COLUMNS)
     {
         row_index_of_selected_view = -1;// -1 means the frames row
@@ -572,8 +583,8 @@
 
 -(CardView *)viewInBoardRowsAtSelectedPoint:(CGPoint)point
 {
-    int index = (int)((point.x - VIEW_SIDE_MARGIN) / (CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN));
-    int row = (int)((point.y - (VIEW_TOP_MARGIN + CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN))/(CARD_IMAGE_HEIGHT/2));
+    int index = (int)((point.x - VIEW_SIDE_MARGIN) / (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN));
+    int row = (int)((point.y - (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN))/(MEDIUM_CARD_IMAGE_HEIGHT/2));
     
     if (index >= 0 && index < NUM_COLUMNS && row >= 0 && row < NUM_ROWS)
     {
@@ -665,8 +676,9 @@
                                  [selectedCardView setAlpha:0.0];
                                  selectedCardView.center = CGPointMake(10000.0, 10000.0);
                                  
+                                 [highlightedBoardSlotView setCard:selectedCardView.card];
                                  
-                                 [highlightedBoardSlotView setCard:selectedCardView.card withImage:selectedCardView.image];
+                                 //[highlightedBoardSlotView setCard:selectedCardView.card withImage:selectedCardView.image];
                                  
                                  //CardAction *action = [selectedCardView.card.cardActions objectAtIndex:0];
                                  

@@ -7,31 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoboUISlotView.h"
 #import "Card.h"
+#import "UIConstants.h"
 
 typedef enum
 {
     EMPTY, BACK, FRONT
 }State;
 
-@interface CardView : UIImageView
-{
-    NSString *_filename;
-}
+@interface CardView : RoboUISlotView
 
 @property (nonatomic, retain) Card *card;
-@property (nonatomic) CGPoint origin;
 
-+(void)cardBackImage;
-+(void)cardSlotImage;
+- (id)initWithPosition:(CGPoint)position cardOrNil:(Card *)c;
 
--(id)initWithCardFileName;
-
--(void)setState:(State) state;
-
-
-
--(void)setImageFromFileName: (NSString *)filename;
--(void)setCard: (Card*) c withImage: (UIImage *) image;
+//-(void)setState:(State) state;
+-(void)setCard:(Card *) c;
 
 @end

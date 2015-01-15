@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Card.h"
 
+@class Deck;
+@protocol DeckDelegate <NSObject>
+
+-(void)dealCard:(Deck *)sender;
+
+@end
+
 @interface Deck : NSObject <NSXMLParserDelegate>
 {
     NSXMLParser *parser;
@@ -18,6 +25,8 @@
     //CardAction *tempCardAction;
     Card *tempCard;
     int quantity;
+    
+    id <DeckDelegate> delegate;
 }
 
 -(id) init;
@@ -29,5 +38,6 @@
 -(Card *) draw;
 
 @property (nonatomic, retain, readwrite) NSMutableArray *cards;
+@property (nonatomic, strong) id delegate;
 
 @end
