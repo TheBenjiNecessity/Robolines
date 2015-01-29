@@ -19,6 +19,12 @@ typedef enum
 @interface ModalViewController : UIViewController
 {
     NSNumber *state;
+    
+    CGFloat screenHeight;
+    CGFloat screenWidth;
+    
+    CGFloat viewHeight;
+    CGFloat viewWidth;
 }
 
 @property (nonatomic, readonly) BOOL isOut;
@@ -29,6 +35,11 @@ typedef enum
 - (void)animateInFromSide:(NSNumber *)side;
 
 - (void)animateOutToSide:(NSNumber *)side;
+
+-(void)fadeIn;
+-(void)fadeOut;
+-(void)appear;
+-(void)disappear;
 //@property (nonatomic) NSNumber *state;
 
 @end

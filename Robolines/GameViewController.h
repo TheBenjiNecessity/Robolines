@@ -20,6 +20,7 @@
 #import "PartSelectorModalViewController.h"
 #import "UIConstants.h"
 #import "DeckView.h"
+#import "RoboLoadingViewController.h"
 
 //typedef enum
 //{
@@ -67,5 +68,6 @@
 
 @property (strong, nonatomic, retain) PartSelectorModalViewController *psmvc;
 @property (strong, nonatomic, retain) NextPlayerViewController *npvc;
+@property (strong, nonatomic, retain) RoboLoadingViewController *rlvc;
 
 @end

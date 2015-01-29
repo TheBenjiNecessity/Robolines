@@ -52,12 +52,6 @@
 
 - (IBAction)orderButton:(id)sender {
     [delegate orderButtonWasTapped:self];
-//    UIButton *button = (UIButton *)sender;
-//    
-//    if ([button.currentTitle isEqualToString:@"X"])
-//        [button setTitle:@"" forState:UIControlStateNormal];
-//    else
-//        [button setTitle:@"X" forState:UIControlStateNormal];
     
     [self setPlayerFromButtons];
 }

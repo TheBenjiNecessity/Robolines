@@ -29,20 +29,10 @@
 
 - (void)animateInFromSide:(NSNumber *)side
 {
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    
-    CGFloat viewHeight = self.view.frame.size.height;
-    CGFloat viewWidth = self.view.frame.size.width;
-    
-    //CGPoint screenCenter = CGPointMake(screenWidth/2, screenHeight/2);
-    
     [self setPositionOfMainViewToCenterOfSide:side];
     
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         [self.view setFrame:CGRectMake((screenWidth - viewWidth)/2, (screenHeight - viewHeight)/2, viewWidth, viewHeight)];
-        //[self.view setCenter:screenCenter];
-//        [self.view setFrame:CGRectMake(512 - (self.view.frame.size.width / 2), 384 - (self.view.frame.size.height / 2), self.view.frame.size.width, self.view.frame.size.height)];
     } completion:^ (BOOL finished){
         isOut = YES;
     }];
@@ -52,22 +42,45 @@
 {
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         [self setPositionOfMainViewToCenterOfSide:side];
-//        [self.view setFrame:CGRectMake(512 - (self.view.frame.size.width / 2), 770, self.view.frame.size.width, self.view.frame.size.height)];
     } completion:^ (BOOL finished){
         isOut = NO;
     }];
 }
 
+-(void)fadeIn
+{
+    [self.view setAlpha:0.0];
+    [self.view setFrame:CGRectMake((screenWidth - viewWidth)/2, (screenHeight - viewHeight)/2, viewWidth, viewHeight)];
+    
+    [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+        [self.view setAlpha:1.0];
+    } completion:^ (BOOL finished){
+        isOut = NO;
+    }];
+}
+
+-(void)fadeOut
+{
+    [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+        [self.view setAlpha:0.0];
+    } completion:^ (BOOL finished){
+
+    }];
+}
+
+-(void)appear
+{
+    [self.view setFrame:CGRectMake((screenWidth - viewWidth)/2, (screenHeight - viewHeight)/2, viewWidth, viewHeight)];
+    [self.view setAlpha:1.0];
+}
+
+-(void)disappear
+{
+    [self.view setAlpha:0.0];
+}
+
 -(void)setPositionOfMainViewToCenterOfSide:(NSNumber *)side
 {
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    
-    CGFloat viewHeight = self.view.frame.size.height;
-    CGFloat viewWidth = self.view.frame.size.width;
-    
-    //CGPoint screenCenter = CGPointMake(screenWidth/2, screenHeight/2);
-    
     CGPoint offSideOrigin;
     
     if (side == [NSNumber numberWithInt:TOP])
@@ -93,6 +106,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    screenHeight = [UIScreen mainScreen].bounds.size.height;
+    screenWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    viewHeight = self.view.frame.size.height;
+    viewWidth = self.view.frame.size.width;
 	// Do any additional setup after loading the view.
 }
 

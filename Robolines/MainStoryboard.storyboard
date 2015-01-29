@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HsT-I2-fjA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="HsT-I2-fjA">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Robolines-->
@@ -205,11 +205,135 @@
                                     <action selector="ToggleHand:" destination="xfy-EF-COq" eventType="touchUpInside" id="ukM-aQ-v8C"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="sP4-8Z-cf6" customClass="CardView">
+                                <rect key="frame" x="114" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-hy-5jB" customClass="CardView">
+                                <rect key="frame" x="218" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="db9-pr-85D" customClass="CardView">
+                                <rect key="frame" x="322" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="lbM-dD-lgh" customClass="CardView">
+                                <rect key="frame" x="426" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Ch-4I-Fbv" customClass="CardView">
+                                <rect key="frame" x="530" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ib0-jl-GsD" customClass="CardView">
+                                <rect key="frame" x="634" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="30l-ne-IbL" customClass="CardView">
+                                <rect key="frame" x="738" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="zOY-hX-eMi" customClass="CardView">
+                                <rect key="frame" x="842" y="20" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="brF-t2-O85" customClass="CardView">
+                                <rect key="frame" x="114" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-wp-jbj" customClass="CardView">
+                                <rect key="frame" x="218" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="N0e-Sy-skP" customClass="CardView">
+                                <rect key="frame" x="322" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZPL-eM-VNH" customClass="CardView">
+                                <rect key="frame" x="426" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="IXP-eS-Nb1" customClass="CardView">
+                                <rect key="frame" x="530" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="D08-t1-9RK" customClass="CardView">
+                                <rect key="frame" x="634" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="2pA-s0-VzD" customClass="CardView">
+                                <rect key="frame" x="738" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="ppm-cc-1TP" customClass="CardView">
+                                <rect key="frame" x="842" y="156" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="RY9-AF-fYr" customClass="CardView">
+                                <rect key="frame" x="114" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="693-c3-kx6" customClass="CardView">
+                                <rect key="frame" x="218" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-TB-hxq" customClass="CardView">
+                                <rect key="frame" x="322" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="rQo-fi-Z26" customClass="CardView">
+                                <rect key="frame" x="426" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-h4-feC" customClass="CardView">
+                                <rect key="frame" x="530" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="a6V-2i-MGG" customClass="CardView">
+                                <rect key="frame" x="634" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="lsp-6l-HQz" customClass="CardView">
+                                <rect key="frame" x="738" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="L1J-RS-7NI" customClass="CardView">
+                                <rect key="frame" x="842" y="292" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="szR-Vd-2YL" customClass="CardView">
+                                <rect key="frame" x="114" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="J1T-Vz-evY" customClass="CardView">
+                                <rect key="frame" x="218" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="huc-r3-Wen" customClass="CardView">
+                                <rect key="frame" x="322" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="agx-JF-Lyf" customClass="CardView">
+                                <rect key="frame" x="426" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="KWl-H7-YUV" customClass="CardView">
+                                <rect key="frame" x="530" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-QW-0CS" customClass="CardView">
+                                <rect key="frame" x="634" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jo9-mT-8u8" customClass="CardView">
+                                <rect key="frame" x="738" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="bhO-EK-Zjs" customClass="CardView">
+                                <rect key="frame" x="842" y="428" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="blW-iu-Oh8" customClass="CardView">
+                                <rect key="frame" x="114" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="0It-Uk-B9C" customClass="CardView">
+                                <rect key="frame" x="218" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="niF-Jc-5Tq" customClass="CardView">
+                                <rect key="frame" x="322" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="nHP-Ds-bgv" customClass="CardView">
+                                <rect key="frame" x="426" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="cbz-Wc-sdl" customClass="CardView">
+                                <rect key="frame" x="530" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="opQ-Jk-0tx" customClass="CardView">
+                                <rect key="frame" x="634" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="yaW-eq-Gss" customClass="CardView">
+                                <rect key="frame" x="738" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardSlot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oxg-YM-5Ge" customClass="CardView">
+                                <rect key="frame" x="842" y="564" width="96" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_cardBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="RcJ-dO-dvd" customClass="DeckView">
+                                <rect key="frame" x="10" y="320" width="96" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="Wbp-fY-Jyf"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
@@ -251,6 +375,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="card_cardBack.png" width="192" height="256"/>
+        <image name="card_cardSlot.png" width="192" height="256"/>
         <image name="metal_background.png" width="2048" height="1536"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

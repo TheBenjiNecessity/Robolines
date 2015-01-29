@@ -17,6 +17,8 @@
 		79131FFF175592DC00CE581F /* PartSelectorModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79131FFD175592DC00CE581F /* PartSelectorModalViewController.m */; };
 		79132000175592DC00CE581F /* PartSelectorModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */; };
 		792F1A801A66FA430008A6AE /* RoboUISlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 792F1A7F1A66FA430008A6AE /* RoboUISlotView.m */; };
+		792F41AE1A78551300E4241B /* RoboLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792F41AC1A78551300E4241B /* RoboLoadingViewController.m */; };
+		792F41AF1A78551300E4241B /* RoboLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792F41AD1A78551300E4241B /* RoboLoadingViewController.xib */; };
 		793352C615EAF2B900FD5175 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C115EAF2B900FD5175 /* cover.png */; };
 		793352C715EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */; };
 		793352C815EAF2B900FD5175 /* robolinesthumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 793352C315EAF2B900FD5175 /* robolinesthumb.png */; };
@@ -99,6 +101,8 @@
 		79AE402C19B147B900129911 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AE402B19B147B900129911 /* GameKit.framework */; };
 		79B9E67619B36D63004A5F93 /* RoboCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B9E67519B36D63004A5F93 /* RoboCard.m */; };
 		79BBBAD317680119009B5B7F /* HandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BBBAD117680119009B5B7F /* HandViewController.m */; };
+		79CF95931A7AF85300C8CED3 /* RoboCardSlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CF95911A7AF85300C8CED3 /* RoboCardSlotViewController.m */; };
+		79CF95941A7AF85300C8CED3 /* RoboCardSlotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79CF95921A7AF85300C8CED3 /* RoboCardSlotViewController.xib */; };
 		79F6077D175D79A2002B436E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6077C175D79A2002B436E /* ModalViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,9 @@
 		79131FFE175592DC00CE581F /* PartSelectorModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PartSelectorModalViewController.xib; sourceTree = "<group>"; };
 		792F1A7E1A66FA430008A6AE /* RoboUISlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUISlotView.h; sourceTree = "<group>"; };
 		792F1A7F1A66FA430008A6AE /* RoboUISlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboUISlotView.m; sourceTree = "<group>"; };
+		792F41AB1A78551300E4241B /* RoboLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboLoadingViewController.h; sourceTree = "<group>"; };
+		792F41AC1A78551300E4241B /* RoboLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboLoadingViewController.m; sourceTree = "<group>"; };
+		792F41AD1A78551300E4241B /* RoboLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoboLoadingViewController.xib; sourceTree = "<group>"; };
 		793352C115EAF2B900FD5175 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = ../../../../Pictures/RobolinesPics/cover.png; sourceTree = "<group>"; };
 		793352C215EAF2B900FD5175 /* Robolines_iPad_Splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Robolines_iPad_Splashscreen.png; path = ../../../../Pictures/RobolinesPics/Robolines_iPad_Splashscreen.png; sourceTree = "<group>"; };
 		793352C315EAF2B900FD5175 /* robolinesthumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = robolinesthumb.png; path = ../../../../Pictures/RobolinesPics/robolinesthumb.png; sourceTree = "<group>"; };
@@ -228,6 +235,9 @@
 		79B9E67519B36D63004A5F93 /* RoboCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboCard.m; sourceTree = "<group>"; };
 		79BBBAD017680119009B5B7F /* HandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandViewController.h; sourceTree = "<group>"; };
 		79BBBAD117680119009B5B7F /* HandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandViewController.m; sourceTree = "<group>"; };
+		79CF95901A7AF85300C8CED3 /* RoboCardSlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboCardSlotViewController.h; sourceTree = "<group>"; };
+		79CF95911A7AF85300C8CED3 /* RoboCardSlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboCardSlotViewController.m; sourceTree = "<group>"; };
+		79CF95921A7AF85300C8CED3 /* RoboCardSlotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoboCardSlotViewController.xib; sourceTree = "<group>"; };
 		79F6077B175D79A2002B436E /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		79F6077C175D79A2002B436E /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -419,6 +429,9 @@
 				795AB3991A1BD465006DFF95 /* DeckView.h */,
 				795AB39A1A1BD465006DFF95 /* DeckView.m */,
 				795AB39C1A1BD52A006DFF95 /* UIConstants.h */,
+				79CF95901A7AF85300C8CED3 /* RoboCardSlotViewController.h */,
+				79CF95911A7AF85300C8CED3 /* RoboCardSlotViewController.m */,
+				79CF95921A7AF85300C8CED3 /* RoboCardSlotViewController.xib */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -434,6 +447,9 @@
 				790B06AB176411E90000D888 /* MoveNumberModalViewController.h */,
 				790B06AC176411E90000D888 /* MoveNumberModalViewController.m */,
 				790B06AD176411E90000D888 /* MoveNumberModalViewController.xib */,
+				792F41AB1A78551300E4241B /* RoboLoadingViewController.h */,
+				792F41AC1A78551300E4241B /* RoboLoadingViewController.m */,
+				792F41AD1A78551300E4241B /* RoboLoadingViewController.xib */,
 				79BBBAD017680119009B5B7F /* HandViewController.h */,
 				79BBBAD117680119009B5B7F /* HandViewController.m */,
 				7998935317D4FB1A007A40F3 /* HandViewController.xib */,
@@ -526,6 +542,7 @@
 				7943A74316B4326300850DC0 /* card_installblueandgreenanddraw.png in Resources */,
 				7943A74416B4326300850DC0 /* card_installblueandpurpleanddraw.png in Resources */,
 				7943A74516B4326300850DC0 /* card_installblueandredanddraw.png in Resources */,
+				79CF95941A7AF85300C8CED3 /* RoboCardSlotViewController.xib in Resources */,
 				7943A74616B4326300850DC0 /* card_installblueandyellowanddraw.png in Resources */,
 				7943A74716B4326300850DC0 /* card_installgreenanddraw.png in Resources */,
 				7943A74816B4326300850DC0 /* card_installgreenandpurpleandblue.png in Resources */,
@@ -542,6 +559,7 @@
 				7943A75316B4326300850DC0 /* card_installwildandswap.png in Resources */,
 				7943A75416B4326300850DC0 /* card_installyellowanddraw.png in Resources */,
 				7943A75516B4326300850DC0 /* card_installyellowandgreenandblue.png in Resources */,
+				792F41AF1A78551300E4241B /* RoboLoadingViewController.xib in Resources */,
 				7943A75616B4326300850DC0 /* card_installyellowandpurpleandblue.png in Resources */,
 				7943A75716B4326300850DC0 /* card_installyellowandpurpleanddraw.png in Resources */,
 				7943A75816B4326300850DC0 /* card_installyellowandpurpleandgreen.png in Resources */,
@@ -578,9 +596,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792F41AE1A78551300E4241B /* RoboLoadingViewController.m in Sources */,
 				79A546BB19B3E544000B52FA /* RoboFrameCardAction.m in Sources */,
 				79820EF815D87F54004A008A /* main.m in Sources */,
 				79B9E67619B36D63004A5F93 /* RoboCard.m in Sources */,
+				79CF95931A7AF85300C8CED3 /* RoboCardSlotViewController.m in Sources */,
 				79820EFC15D87F54004A008A /* RoboAppDelegate.m in Sources */,
 				79820F0215D87F54004A008A /* RoboViewController.m in Sources */,
 				7997F8BA15EA606F0061C65D /* NewGameOptionsViewController.m in Sources */,

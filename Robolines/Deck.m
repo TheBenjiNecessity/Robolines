@@ -2,8 +2,8 @@
 //  Deck.m
 //  Robolines
 //
-//  Created by Benjamin Wishart on 2012-09-23.
-//  Copyright (c) 2012 Benjamin Wishart. All rights reserved.
+//  Created by Benjamin Wishart on 2013-09-23.
+//  Copyright (c) 2013 Benjamin Wishart. All rights reserved.
 //
 
 #import "Deck.h"
@@ -20,16 +20,6 @@
     {
         cards = [[NSMutableArray alloc] init];
         [self parseDeckFile];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
-        [self shuffle];
         [self shuffle];
         return self;
     }
@@ -64,11 +54,7 @@
     }
     else if ([elementName isEqualToString:@"action"])
     {
-//        if (tempCardAction == nil) {
-//            //tempCardAction = [[CardAction alloc] init];
-//        }
-    
-//        tempCardAction.group = [[attributeDict objectForKey:@"group"] intValue];
+
     }
     else if ([elementName isEqualToString:@"parts"])
     {
@@ -83,12 +69,9 @@
 
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
-    //
     elementName = [elementName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     element = [NSMutableString stringWithString:[element stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-    
-    //NSLog(@"Found an element named: %@ with a value of: %@", elementName, element);
     
     if ([elementName isEqualToString:@"card"])
     {
@@ -100,7 +83,6 @@
     }
     else if ([elementName isEqualToString:@"title"])
     {
-        //[tempCard setTitle:element];
         
     }
     else if ([elementName isEqualToString:@"quantity"])
@@ -109,30 +91,26 @@
     }
     else if ([elementName isEqualToString:@"imagename"])
     {
-        //NSLog(@"imagename: %@", element);
-        //[tempCard setImageFileName:element];
+
     }
     else if ([elementName isEqualToString:@"action"])
     {
-//        [cardActions addObject:tempCardAction];
-//        tempCardAction = nil;
+
     }
     else if ([elementName isEqualToString:@"actions"])
     {
-        //[tempCard setCardActions:cardActions];
         cardActions = nil;
     }
     else if ([elementName isEqualToString:@"type"])
     {
-        //[tempCardAction setType:[element intValue]];
+
     }
     else if ([elementName isEqualToString:@"number"])
     {
-        //[tempCardAction setNumber:[element intValue]];
+
     }
     else if ([elementName isEqualToString:@"parts"])
     {
-        //[tempCardAction setParts:parts];
         parts = nil;
     }
     else if ([elementName isEqualToString:@"part"])
@@ -174,26 +152,5 @@
     [cards removeLastObject];
     return card;
 }
-
--(void)print
-{
-    for(Card *card in cards)
-    {
-        //NSLog(@"Card: %@", [card title]);
-//        for (CardAction *cardAction in [card cardActions])
-//        {
-//            NSLog(@"Action - type: %d", cardAction.type);
-//        }
-    }
-}
-
-/*
--(void) dealloc
-{
-    [cards release];
-    
-    [super dealloc];
-}
-*/
 
 @end

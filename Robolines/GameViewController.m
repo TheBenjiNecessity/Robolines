@@ -22,9 +22,7 @@
 
 #define HAND_VIEW_UP_CENTER         374.0
 #define HAND_VIEW_CARD_MARGIN       10.0
-#define VIEW_SIDE_MARGIN            100.0
-#define VIEW_TOP_MARGIN             20.0
-#define VIEW_INTER_CARD_MARGIN      8.0
+
 
 @interface GameViewController ()
 
@@ -47,6 +45,7 @@
 
 @synthesize psmvc;
 @synthesize npvc;
+@synthesize rlvc;
 
 @synthesize game;
 
@@ -68,15 +67,13 @@
 
 -(void)initUI
 {
+    NSLog(@"initUI start");
     NSMutableArray *frameSlots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
     for (int i = 0; i < NUM_COLUMNS; i++)
     {
         CardView *frameslot = [[CardView alloc] initWithPosition:CGPointMake((i * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN) cardOrNil:nil];
         
-        //CardView *frameslot = [[CardView alloc] initWithFrame:CGRectMake((i * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN, MEDIUM_CARD_IMAGE_WIDTH/2, MEDIUM_CARD_IMAGE_HEIGHT/2)];
-        
         [frameSlots addObject:frameslot];
-        
         [self.view addSubview:frameslot];
     }
     framesRow = [[NSArray alloc] initWithArray:frameSlots];
@@ -91,26 +88,19 @@
             CardView *slot = [[CardView alloc] initWithPosition:CGPointMake((column * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
                                                                             (row * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) cardOrNil:nil];
             
-            //CardView *slot = [[CardView alloc] initWithFrame:CGRectMake((column * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
-                                                                        //(row * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN),
-                                                                        //MEDIUM_CARD_IMAGE_WIDTH/2,
-                                                                        //MEDIUM_CARD_IMAGE_HEIGHT/2)];
-            
             [slots addObject:slot];
-            
             [self.view addSubview:slot];
         }
         [rows addObject:slots];
     }
     boardRows = [[NSArray alloc] initWithArray:rows];
     
-    deckView = [[DeckView alloc] initWithPosition:CGPointMake((-1.0 * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
-                                                                    (1.0 * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) deckOrNil:game.deck];
+    deckView = [[DeckView alloc] initWithPosition:CGPointMake((-1.0 * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, (1.0 * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) deckOrNil:game.deck];
     
-    [self.view addSubview:deckView];
+    
     
     selectedCardView = [[CardView alloc] init];
-    [self.view addSubview:selectedCardView];
+    
     [selectedCardView setAlpha:0.0];
     
     cardSelectTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cardViewWasTapped:)];
@@ -121,8 +111,13 @@
     
     handViewController = [[HandViewController alloc] initWithNibName:@"HandViewController" bundle:nil];
     
+    [self.view addSubview:deckView];
+    [self.view addSubview:selectedCardView];
+        
     [self.view addSubview:handViewController.view];
     [self.view bringSubviewToFront:selectedCardView];
+    
+    NSLog(@"initUI start");
 }
 
 /* ------------------------ OUTLET METHODS ------------------------ */
@@ -131,8 +126,12 @@
 }
 
 - (IBAction)ToggleHand:(id)sender {
-    npvc = [[NextPlayerViewController alloc] initWithNibName:@"NextPlayerViewController" bundle:nil superView:self.view state:nil];
-    [npvc animateIn];
+//    RoboLoadingViewController *rlvc = [[RoboLoadingViewController alloc] initWithNibName:@"RoboLoadingViewController" bundle:nil superView:self.view state:nil];
+//    [rlvc appear];
+    
+    
+//    npvc = [[NextPlayerViewController alloc] initWithNibName:@"NextPlayerViewController" bundle:nil superView:self.view state:nil];
+//    [npvc animateIn];
     
 //    psmvc = [[PartSelectorModalViewController alloc] initWithNibName:@"PartSelectorModalViewController" bundle:nil superView:self.view state:[NSNumber numberWithInt:SWAP]];
 //    [psmvc animateInFromSide:[NSNumber numberWithInt:BOTTOM]];
@@ -149,6 +148,21 @@
 //    }
 }
 
+-(void)showLoadingModalView
+{
+    rlvc = [[RoboLoadingViewController alloc] initWithNibName:@"RoboLoadingViewController" bundle:nil superView:self.view state:nil];
+    
+    [rlvc appear];
+}
+
+-(void)hideLoadingModalView
+{
+    if (rlvc != nil)
+        [rlvc disappear];
+    
+    rlvc = nil;
+}
+
 -(void)okayButtonWasTapped:(NextPlayerViewController *)sender
 {
     [npvc animateOutToSide:[NSNumber numberWithInt:LEFT]];
@@ -157,24 +171,15 @@
 -(void)startGame
 {
     [self initUI];
-    //[self initGame];
     
     [self setUpPlayerSidebarViews];
     [self setupSceneForCurrentPlayer];
-    
-    //[self animateHandViewUp];
-    
 }
 
 -(void)dealAllPlayers
 {
-    for (int c = 0; c < game.players.count; c++)
-        [self dealCardToPlayer:[game.players objectAtIndex:c]];
-}
-
--(void)dealCardToPlayer:(Player *)player
-{
-    //[player addToHandCard:[deck ];
+//    for (int c = 0; c < game.players.count; c++)
+//        [self dealCardToPlayer:[game.players objectAtIndex:c]];
 }
 
 - (void)animateOutPlayerSideBarViewOfCurrentPlayer
@@ -490,60 +495,6 @@
 //    }
 }
 
-//-(int)resolveGroupTwoActionsForCard:(Card *) card//needs user intervention
-//{
-//    NSArray *cardActions = card.cardActions;
-//    for (CardAction *action in cardActions)//this should group the actions together into a list for resolution
-//    {
-//        if (action.group == 2)
-//        {
-//            switch (action.type) {
-//                case ADD:
-//                    if (![game.board frameisFullAtColumn:column_index_of_resolving_card] && [CardAction getEnumForStringColor:[action.parts objectAtIndex:0]] == [NSNumber numberWithInt:WILD])
-//                    {
-//                        RESOLVESTATE = [NSNumber numberWithInt:ADDPARTS];
-//                        //[//self showPartSelectorModalViewForFrame:[game.board getFrameAtColumn:column_index_of_resolving_card]];
-//                    }
-//                    else
-//                    {
-//#warning show that the card could not be resolved
-//                    }
-//                    break;
-//                case REMOVE:
-//                    if (![game.board frameisFullAtColumn:column_index_of_resolving_card] && [CardAction getEnumForStringColor:[action.parts objectAtIndex:0]] == [NSNumber numberWithInt:WILD])
-//                    {
-//                        RESOLVESTATE = [NSNumber numberWithInt:REMOVEPARTS];
-//                        //[self showPartSelectorModalViewForFrame:[game.board getFrameAtColumn:column_index_of_resolving_card]];
-//                    }
-//                    else
-//                    {
-//#warning show that the card could not be resolved
-//                    }
-//                    break;
-//                case PEEK:
-//                    
-//                    break;
-//                case DRAW:
-//                    //there is nothing to do here
-//                    break;
-//                case PLAY:
-//                    
-//                    break;
-//                case SWAP:
-//                    
-//                    break;
-//                case MOVE:
-//                    
-//                    break;
-//                default:
-//                    break;
-//            }
-//
-//        }
-//    }
-//    return 0;
-//}
-
 -(void)showModalViewController:(UIViewController *)viewController fromStartingPoint:(CGPoint)startpoint toEndingPoint:(CGPoint)endpoint
 {
     [viewController.view setFrame:CGRectMake(startpoint.x, startpoint.y, viewController.view.frame.size.width, viewController.view.frame.size.height)];
@@ -576,9 +527,11 @@
 
 -(void)drawCardForPlayer:(Player *)player
 {
-    [game drawCardForPlayer:player];
+//    if (player == game.currentPlayer)
+//        [deckView drawCardToPosition:CGPointMake(0.0, 0.0) afterDelay:0.0];
+//    else if
     
-    
+    //[game drawCardForPlayer:player];
 }
 
 -(CardView *)viewInBoardRowsAtSelectedPoint:(CGPoint)point
@@ -740,11 +693,63 @@
 //    }
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    //deal cards
+    int delay = 0;
+    for (int i = 0; i < STARTING_HAND_SIZE; i++) {
+        for (int j = 0; j < game.players.count; j++) {
+            UIImageView *tempDealtCardView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 320, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+            
+            [tempDealtCardView setImage:[CardView cardBackImage]];
+            
+            [self.view addSubview:tempDealtCardView];
+            [self.view bringSubviewToFront:tempDealtCardView];
+            
+            CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+            CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+            
+            [UIView animateWithDuration:ANIMATION_DURATION
+                                  delay: ((delay++)*0.1)
+                                options:UIViewAnimationOptionCurveEaseOut
+                             animations:^{
+                switch (j) {
+                    case 0:
+                        [tempDealtCardView setFrame:CGRectMake(screenWidth/2, screenHeight + VIEW_OFFSET_BUFFER, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                        break;
+                    case 1:
+                        [tempDealtCardView setFrame:CGRectMake(screenWidth + VIEW_OFFSET_BUFFER, screenHeight/2, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                        break;
+                    case 2:
+                        [tempDealtCardView setFrame:CGRectMake(screenWidth/2, 0.0 - (VIEW_OFFSET_BUFFER + 30.0), SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                        break;
+                    case 3:
+                        [tempDealtCardView setFrame:CGRectMake(0.0 - VIEW_OFFSET_BUFFER, screenHeight/2, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                        break;
+                    default:
+                        break;
+                }
+            }
+                             completion:^ (BOOL finished){
+
+            }];
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self startGame];
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        dispatch_sync(dispatch_get_main_queue(), ^(void) {
+//            [self showLoadingModalView];
+//        });
+//        [self startGame];
+//        dispatch_sync(dispatch_get_main_queue(), ^(void) {
+//            [self hideLoadingModalView];
+//        });
+//    });
 }
 
 - (void)viewDidUnload

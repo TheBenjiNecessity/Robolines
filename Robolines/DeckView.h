@@ -11,10 +11,25 @@
 #import "Deck.h"
 #import "UIConstants.h"
 
-@interface DeckView : RoboUISlotView <DeckDelegate>
+
+@class DeckView;
+@protocol DeckViewDelegate <NSObject>
+
+-(void)showDealCardAnimation:(UIImageView *)animatingView;
+
+@end
+
+@interface DeckView : RoboUISlotView
+{
+    NSMutableArray *drawAnimationsQueue;
+    id <DeckViewDelegate> delegate;
+}
 
 @property (nonatomic) Deck *deck;
+@property (nonatomic, strong) id delegate;
 
-- (id)initWithPosition:(CGPoint)position deckOrNil:(Deck *)deck;
+-(id)initWithPosition:(CGPoint)position deckOrNil:(Deck *)deck;
+-(void)drawCardToPosition:(CGPoint)position afterDelay:(CGFloat)delay;
+-(void)flushAnimations;
 
 @end

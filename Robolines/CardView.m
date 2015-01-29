@@ -45,41 +45,6 @@
     return self;
 }
 */
-                          
-//+(UIImage *)cardBackImage
-//{
-//    UIImage *cardBack = nil;
-//    
-//    if (cardBack == nil)
-//    {
-//        //cardBack = [UIImage imageWithContentsOfFile:@"card_cardBack.png"];
-//        
-//        NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardBack" ofType:@"png"];
-//        
-//        NSData *data = [NSData dataWithContentsOfFile:path];
-//        
-//        cardBack = [UIImage imageWithData:data];
-//    }
-//    
-//    return cardBack;
-//}
-//
-//+(UIImage *)cardSlotImage
-//{
-//    UIImage *cardSlot = nil;
-//    
-//    if (cardSlot == nil)
-//    {
-//        NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardSlot" ofType:@"png"];
-//        
-//        NSData *data = [NSData dataWithContentsOfFile:path];
-//        
-//        cardSlot = [UIImage imageWithData:data];
-//    }
-//    
-//    return cardSlot;
-//}
-
 
 -(void)setCard:(Card *) c
 {
