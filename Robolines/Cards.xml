@@ -14,7 +14,7 @@
             </action>
         </actions>
         <quantity>5</quantity>
-        <imagename>card_installwildandswap.png</imagename>
+        <imagename>card_installwildandswap</imagename>
     </card>
     <card>
         <title>Draw Five</title>
@@ -25,7 +25,7 @@
             </action>
         </actions>
         <quantity>4</quantity>
-        <imagename>card_drawfive.png</imagename>
+        <imagename>card_drawfive</imagename>
     </card>
     <card>
         <title>Peek</title>
@@ -35,7 +35,7 @@
             </action>
         </actions>
         <quantity>4</quantity>
-        <imagename>card_peek.png</imagename>
+        <imagename>card_peek</imagename>
     </card>
     <card>
         <title>Move</title>
@@ -66,7 +66,7 @@
             </action>
         </actions>
         <quantity>5</quantity>
-        <imagename>card_moveplusorminusthree.png</imagename>
+        <imagename>card_moveplusorminusthree</imagename>
     </card>
     <card>
         <title>Frame</title>
@@ -76,7 +76,7 @@
         	</action>
         </actions>
         <quantity>15</quantity>
-        <imagename>card_frame.png</imagename>
+        <imagename>card_frame</imagename>
     </card>
     <card>
         <title>Add Wild</title>
@@ -89,7 +89,7 @@
             </action>
         </actions>
         <quantity>3</quantity>
-        <imagename>card_installwild.png</imagename>
+        <imagename>card_installwild</imagename>
     </card>
     <card>
         <title>Remove Wild</title>
@@ -102,7 +102,7 @@
             </action>
         </actions>
         <quantity>4</quantity>
-        <imagename>card_removewild.png</imagename>
+        <imagename>card_removewild</imagename>
     </card>
     <card>
         <title>Remove Red and Play</title>
@@ -119,7 +119,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removeredandplay.png</imagename>
+        <imagename>card_removeredandplay</imagename>
     </card>
     <card>
         <title>Remove Blue and Play</title>
@@ -136,7 +136,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removeblueandplay.png</imagename>
+        <imagename>card_removeblueandplay</imagename>
     </card>
     <card>
         <title>Remove Green and Play</title>
@@ -153,7 +153,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removegreenandplay.png</imagename>
+        <imagename>card_removegreenandplay</imagename>
     </card>
     <card>
         <title>Remove Yellow and Play</title>
@@ -170,7 +170,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removeyellowandplay.png</imagename>
+        <imagename>card_removeyellowandplay</imagename>
     </card>
     <card>
         <title>Remove Purple and Play</title>
@@ -187,7 +187,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removepurpleandplay.png</imagename>
+        <imagename>card_removepurpleandplay</imagename>
     </card>
 	<card>
         <title>Remove Red and Move Back</title>
@@ -204,7 +204,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removeredandmove.png</imagename>
+        <imagename>card_removeredandmove</imagename>
     </card>
     <card>
         <title>Remove Blue and Move Back</title>
@@ -221,7 +221,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removeblueandmove.png</imagename>
+        <imagename>card_removeblueandmove</imagename>
     </card>
     <card>
         <title>Remove Green and Move Back</title>
@@ -238,7 +238,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removegreenandmove.png</imagename>
+        <imagename>card_removegreenandmove</imagename>
     </card>
     <card>
         <title>Remove Yellow and Move Back</title>
@@ -255,7 +255,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removeyellowandmove.png</imagename>
+        <imagename>card_removeyellowandmove</imagename>
     </card>
     <card>
         <title>Remove Purple and Move Back</title>
@@ -272,7 +272,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_removepurpleandmove.png</imagename>
+        <imagename>card_removepurpleandmove</imagename>
     </card>
     <card>
         <title>Add Yellow and Draw</title>
@@ -289,7 +289,7 @@
             </action>
         </actions>
         <quantity>3</quantity>
-        <imagename>card_installyellowanddraw.png</imagename>
+        <imagename>card_installyellowanddraw</imagename>
     </card>
     <card>
         <title>Add Red and Draw</title>
@@ -306,7 +306,7 @@
             </action>
         </actions>
         <quantity>3</quantity>
-        <imagename>card_installredanddraw.png</imagename>
+        <imagename>card_installredanddraw</imagename>
     </card>
     <card>
         <title>Add Blue and Draw</title>
@@ -323,7 +323,7 @@
             </action>
         </actions>
         <quantity>3</quantity>
-        <imagename>card_installblueanddraw.png</imagename>
+        <imagename>card_installblueanddraw</imagename>
     </card>
     <card>
         <title>Add Purple and Draw</title>
@@ -340,7 +340,7 @@
             </action>
         </actions>
         <quantity>3</quantity>
-        <imagename>card_installpurpleanddraw.png</imagename>
+        <imagename>card_installpurpleanddraw</imagename>
     </card>
     <card>
         <title>Add Green and Draw</title>
@@ -357,7 +357,7 @@
             </action>
         </actions>
         <quantity>3</quantity>
-        <imagename>card_installgreenanddraw.png</imagename>
+        <imagename>card_installgreenanddraw</imagename>
     </card>
     <card>
         <title>Add Yellow and Red and Draw</title>
@@ -375,7 +375,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installredandyellowanddraw.png</imagename>
+        <imagename>card_installredandyellowanddraw</imagename>
     </card>
     <card>
         <title>Add Yellow and Blue and Draw</title>
@@ -393,7 +393,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installblueandyellowanddraw.png</imagename>
+        <imagename>card_installblueandyellowanddraw</imagename>
     </card>
     <card>
         <title>Add Yellow and Green and Draw</title>
@@ -411,7 +411,7 @@
             </action>
         </actions> 
         <quantity>2</quantity>
-        <imagename>card_installyellowandgreenanddraw.png</imagename>
+        <imagename>card_installyellowandgreenanddraw</imagename>
     </card>
     <card>
         <title>Add Yellow and Purple and Draw</title>
@@ -429,7 +429,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installyellowandpurpleanddraw.png</imagename>
+        <imagename>card_installyellowandpurpleanddraw</imagename>
     </card>
     <card>
         <title>Add Red and Blue and Draw</title>
@@ -447,7 +447,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installblueandredanddraw.png</imagename>
+        <imagename>card_installblueandredanddraw</imagename>
     </card>
     <card>
         <title>Add Red and Green and Draw</title>
@@ -465,7 +465,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installredandgreenanddraw.png</imagename>
+        <imagename>card_installredandgreenanddraw</imagename>
     </card>
     <card>
         <title>Add Red and Purple and Draw</title>
@@ -483,7 +483,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installredandpurpleanddraw.png</imagename>
+        <imagename>card_installredandpurpleanddraw</imagename>
     </card>
     <card>
         <title>Add Blue and Green and Draw</title>
@@ -501,7 +501,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installblueandgreenanddraw.png</imagename>
+        <imagename>card_installblueandgreenanddraw</imagename>
     </card>
     <card>
         <title>Add Blue and Purple and Draw</title>
@@ -519,7 +519,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installblueandpurpleanddraw.png</imagename>
+        <imagename>card_installblueandpurpleanddraw</imagename>
     </card>
     <card>
         <title>Add Green and Purple and Draw</title>
@@ -537,7 +537,7 @@
             </action>
         </actions>
         <quantity>2</quantity>
-        <imagename>card_installgreenandpurpleanddraw.png</imagename>
+        <imagename>card_installgreenandpurpleanddraw</imagename>
     </card>
     <card>
         <title>Add Green, Purple, and Yellow</title>
@@ -552,7 +552,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installyellowandpurpleandgreen.png</imagename>
+        <imagename>card_installyellowandpurpleandgreen</imagename>
     </card>
     <card>
         <title>Add Green, Purple, and Red</title>
@@ -567,7 +567,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installgreenandredandpurple.png</imagename>
+        <imagename>card_installgreenandredandpurple</imagename>
     </card>
     <card>
         <title>Add Green, Purple, and Blue</title>
@@ -582,7 +582,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installgreenandpurpleandblue.png</imagename>
+        <imagename>card_installgreenandpurpleandblue</imagename>
     </card>
     <card>
         <title>Add Green, Yellow, and Blue</title>
@@ -597,7 +597,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installyellowandgreenandblue.png</imagename>
+        <imagename>card_installyellowandgreenandblue</imagename>
     </card>
     <card>
         <title>Add Green, Red, and Blue</title>
@@ -612,7 +612,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installgreenandredandblue.png</imagename>
+        <imagename>card_installgreenandredandblue</imagename>
     </card>
     <card>
         <title>Add Green, Yellow, and Red</title>
@@ -627,7 +627,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installyellowandredandgreen.png</imagename>
+        <imagename>card_installyellowandredandgreen</imagename>
     </card>
     <card>
         <title>Add Blue, Yellow, and Red</title>
@@ -642,7 +642,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installyellowandredandblue.png</imagename>
+        <imagename>card_installyellowandredandblue</imagename>
     </card>
     <card>
         <title>Add Purple, Yellow, and Blue</title>
@@ -657,7 +657,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installyellowandpurpleandblue.png</imagename>
+        <imagename>card_installyellowandpurpleandblue</imagename>
     </card>
     <card>
         <title>Add Purple, Red, and Blue</title>
@@ -672,7 +672,7 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installredandpurpleandblue.png</imagename>
+        <imagename>card_installredandpurpleandblue</imagename>
     </card>
     <card>
         <title>Add Purple, Yellow, and Red</title>
@@ -687,6 +687,6 @@
             </action>
         </actions>
         <quantity>1</quantity>
-        <imagename>card_installyellowandpurpleandred.png</imagename>
+        <imagename>card_installyellowandpurpleandred</imagename>
     </card>
 </deck>

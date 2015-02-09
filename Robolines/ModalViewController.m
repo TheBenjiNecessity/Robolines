@@ -23,6 +23,7 @@
         // Custom initialization
         state = modalState;
         [superview addSubview:self.view];
+        isOut = NO;
     }
     return self;
 }
@@ -55,7 +56,7 @@
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         [self.view setAlpha:1.0];
     } completion:^ (BOOL finished){
-        isOut = NO;
+        isOut = YES;
     }];
 }
 
@@ -64,7 +65,7 @@
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         [self.view setAlpha:0.0];
     } completion:^ (BOOL finished){
-
+        isOut = NO;
     }];
 }
 
@@ -72,11 +73,13 @@
 {
     [self.view setFrame:CGRectMake((screenWidth - viewWidth)/2, (screenHeight - viewHeight)/2, viewWidth, viewHeight)];
     [self.view setAlpha:1.0];
+    isOut = YES;
 }
 
 -(void)disappear
 {
     [self.view setAlpha:0.0];
+    isOut = NO;
 }
 
 -(void)setPositionOfMainViewToCenterOfSide:(NSNumber *)side

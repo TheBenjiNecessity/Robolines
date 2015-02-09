@@ -26,8 +26,6 @@
     
     if (cardBack == nil)
     {
-        //cardBack = [UIImage imageWithContentsOfFile:@"card_cardBack.png"];
-        
         NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardBack" ofType:@"png"];
         
         NSData *data = [NSData dataWithContentsOfFile:path];

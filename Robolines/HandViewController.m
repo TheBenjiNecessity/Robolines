@@ -24,17 +24,39 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil superView:superview state:modalState];
     if (self) {
         // Custom initialization
-        
     }
     return self;
 }
 
+
+-(void)test
+{
+    int playerHandCount = 10;
+    [HandView setContentSize:CGSizeMake((SMALL_CARD_IMAGE_WIDTH + HAND_VIEW_CARD_MARGIN) * playerHandCount, HandView.frame.size.height)];
+    
+    NSArray *viewsToRemove = [HandView subviews];
+    for (UIView *view in viewsToRemove)
+    {
+        [view removeFromSuperview];
+    }
+    
+    HandCardViews = [[NSMutableArray alloc] init];
+    for (int i = 0; i < playerHandCount; i++) {
+        CGFloat xorigin = i * (SMALL_CARD_IMAGE_WIDTH + HAND_VIEW_CARD_MARGIN);
+        CardView *cv = [[CardView alloc] initWithFrame:CGRectMake(xorigin, 0.0, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+        Card *currentCard = [[Card alloc] initWithImageFileName:@"card_cardBack"];
+        [cv setCard:currentCard];
+        
+        [HandView addSubview:cv];
+        [HandCardViews addObject:cv];
+    }
+
+}
+
 -(void)setupHandForPlayer: (Player *)player
 {
-    NSLog(@"setup hand for player");
-    //[self animateOutToSide:[NSNumber numberWithInt:BOTTOM]];
     int playerHandCount = player.hand.count;
-    [HandView setContentSize:CGSizeMake((MEDIUM_CARD_IMAGE_WIDTH/2 + HAND_VIEW_CARD_MARGIN) * playerHandCount, HandView.frame.size.height)];
+    [HandView setContentSize:CGSizeMake((SMALL_CARD_IMAGE_WIDTH + HAND_VIEW_CARD_MARGIN) * playerHandCount, HandView.frame.size.height)];
 
     NSArray *viewsToRemove = [HandView subviews];
     for (UIView *view in viewsToRemove)
@@ -44,29 +66,25 @@
     
     HandCardViews = [[NSMutableArray alloc] init];
     for (int i = 0; i < playerHandCount; i++) {
-        CGFloat xorigin = i * (MEDIUM_CARD_IMAGE_WIDTH/2 + HAND_VIEW_CARD_MARGIN);
-        CardView *cv = [[CardView alloc] initWithFrame:CGRectMake(xorigin, 0.0, MEDIUM_CARD_IMAGE_WIDTH/2, MEDIUM_CARD_IMAGE_HEIGHT/2)];
+        CGFloat xorigin = i * (SMALL_CARD_IMAGE_WIDTH + HAND_VIEW_CARD_MARGIN);
+        CardView *cv = [[CardView alloc] initWithFrame:CGRectMake(xorigin, 0.0, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
         Card *currentCard = [player.hand objectAtIndex:i];
         [cv setCard:currentCard];
-        //[cv setImageFromFileName:currentCard.imageFileName];
+
         [HandView addSubview:cv];
         [HandCardViews addObject:cv];
     }
 }
 
-//-(void)setState:(NSNumber *)s
-//{
-//    [super setState:s];
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //cardDragRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:parent action:@selector(cardIsBeingDragged:)];
-    //[self.view addGestureRecognizer:cardDragRecognizer];
     
     [HandView setPagingEnabled:YES];
     [HandView setClipsToBounds:YES];
+    
+//    [self.view.layer setBorderColor:[UIColor blackColor].CGColor];
+//    [self.view.layer setBorderWidth:1.0];
     // Do any additional setup after loading the view from its nib.
 }
 

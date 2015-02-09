@@ -23,13 +23,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBar.hidden = true;
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

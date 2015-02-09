@@ -46,13 +46,30 @@
 }
 */
 
+-(UIImage *)cardFrontImage
+{
+    UIImage *cardFront;
+    
+    if (cardFront == nil)
+    {
+        NSString *path = [[NSBundle mainBundle] pathForResource:card.filename ofType:@"png"];
+        
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        
+        cardFront = [UIImage imageWithData:data];
+    }
+    
+    return cardFront;
+}
+
+
 -(void)setCard:(Card *) c
 {
     card = c;
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:[card filename] ofType:@"png"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    [self setImage:[UIImage imageWithData:data]];
+    //NSString *path = [[NSBundle mainBundle] pathForResource:[card filename] ofType:@"png"];
+    //NSData *data = [NSData dataWithContentsOfFile:path];
+    [self setImage:[self cardFrontImage]];
 }
 
 -(void)removeCard

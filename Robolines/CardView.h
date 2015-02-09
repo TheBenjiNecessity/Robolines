@@ -22,7 +22,6 @@ typedef enum
 
 - (id)initWithPosition:(CGPoint)position cardOrNil:(Card *)c;
 
-//-(void)setState:(State) state;
 -(void)setCard:(Card *) c;
 
 @end

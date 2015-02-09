@@ -101,6 +101,7 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     roboPlayerCreator1 = [[RoboPlayerCreatorViewController alloc] initWithNibName:@"RoboPlayerCreatorViewController" bundle:nil];
     [roboPlayerCreator1.view setFrame:CGRectMake(0.0, 0.0, roboPlayerCreator1.view.frame.size.width, roboPlayerCreator1.view.frame.size.height)];

@@ -67,35 +67,34 @@
 
 -(void)initUI
 {
-    NSLog(@"initUI start");
-    NSMutableArray *frameSlots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
-    for (int i = 0; i < NUM_COLUMNS; i++)
-    {
-        CardView *frameslot = [[CardView alloc] initWithPosition:CGPointMake((i * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN) cardOrNil:nil];
-        
-        [frameSlots addObject:frameslot];
-        [self.view addSubview:frameslot];
-    }
-    framesRow = [[NSArray alloc] initWithArray:frameSlots];
+//    NSMutableArray *frameSlots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
+//    for (int i = 0; i < NUM_COLUMNS; i++)
+//    {
+//        CardView *frameslot = [[CardView alloc] initWithPosition:CGPointMake((i * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, VIEW_TOP_MARGIN) cardOrNil:nil];
+//        
+//        [frameSlots addObject:frameslot];
+//        [self.view addSubview:frameslot];
+//    }
+//    framesRow = [[NSArray alloc] initWithArray:frameSlots];
+//    
+//    
+//    NSMutableArray *rows = [[NSMutableArray alloc] initWithCapacity:NUM_ROWS];
+//    for (int row = 0; row < NUM_ROWS; row++)
+//    {
+//        NSMutableArray *slots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
+//        for (int column = 0; column < NUM_COLUMNS; column++)
+//        {
+//            CardView *slot = [[CardView alloc] initWithPosition:CGPointMake((column * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
+//                                                                            (row * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) cardOrNil:nil];
+//            
+//            [slots addObject:slot];
+//            [self.view addSubview:slot];
+//        }
+//        [rows addObject:slots];
+//    }
+//    boardRows = [[NSArray alloc] initWithArray:rows];
     
-    
-    NSMutableArray *rows = [[NSMutableArray alloc] initWithCapacity:NUM_ROWS];
-    for (int row = 0; row < NUM_ROWS; row++)
-    {
-        NSMutableArray *slots = [[NSMutableArray alloc] initWithCapacity:NUM_COLUMNS];
-        for (int column = 0; column < NUM_COLUMNS; column++)
-        {
-            CardView *slot = [[CardView alloc] initWithPosition:CGPointMake((column * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN,
-                                                                            (row * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) cardOrNil:nil];
-            
-            [slots addObject:slot];
-            [self.view addSubview:slot];
-        }
-        [rows addObject:slots];
-    }
-    boardRows = [[NSArray alloc] initWithArray:rows];
-    
-    deckView = [[DeckView alloc] initWithPosition:CGPointMake((-1.0 * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, (1.0 * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) deckOrNil:game.deck];
+//    deckView = [[DeckView alloc] initWithPosition:CGPointMake((-1.0 * (MEDIUM_CARD_IMAGE_WIDTH/2 + VIEW_INTER_CARD_MARGIN)) + VIEW_SIDE_MARGIN, (1.0 * MEDIUM_CARD_IMAGE_HEIGHT/2) + (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2 + VIEW_INTER_CARD_MARGIN)) deckOrNil:game.deck];
     
     
     
@@ -109,15 +108,19 @@
     cardDraggingRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(cardIsBeingDragged:)];
     [self.view addGestureRecognizer:cardDraggingRecognizer];
     
-    handViewController = [[HandViewController alloc] initWithNibName:@"HandViewController" bundle:nil];
+    //handViewController = [[HandViewController alloc] initWithNibName:@"HandViewController" bundle:nil];
+    handViewController = [[HandViewController alloc] initWithNibName:@"HandViewController" bundle:nil superView:self.view state:nil];
     
-    [self.view addSubview:deckView];
+    [handViewController setupHandForPlayer:game.currentPlayer];
+    //[handViewController test];
+    [handViewController setPositionOfMainViewToCenterOfSide:[NSNumber numberWithInt:BOTTOM]];
+    
+    //[self.view addSubview:deckView];
     [self.view addSubview:selectedCardView];
         
     [self.view addSubview:handViewController.view];
+    [self.view bringSubviewToFront:handViewController.view];
     [self.view bringSubviewToFront:selectedCardView];
-    
-    NSLog(@"initUI start");
 }
 
 /* ------------------------ OUTLET METHODS ------------------------ */
@@ -138,14 +141,17 @@
 //
 //    [self showModalViewController:mnmvc fromStartingPoint:CGPointMake(300.0, 768.0) toEndingPoint:CGPointMake(300.0, 300.0)];
     
-//    if ([self isHandViewUp])
-//    {
-//        [self animateHandViewDown];
-//    }
-//    else
-//    {
-//        [self animateHandViewUp];
-//    }
+    if (!handViewController.isOut)
+    {
+        [handViewController animateInFromSide:[NSNumber numberWithInt:BOTTOM]];
+        NSLog(@"animate hand in");
+    }
+    else
+    {
+        [handViewController animateOutToSide:[NSNumber numberWithInt:BOTTOM]];
+        NSLog(@"animate hand out");
+    }
+    
 }
 
 -(void)showLoadingModalView
@@ -233,15 +239,15 @@
 
 -(void)refreshHandView
 {
-    [handViewController setupHandForPlayer:game.currentPlayer];
+    //[handViewController setupHandForPlayer:game.currentPlayer];
 }
 
 -(void)setupSceneForCurrentPlayer
 {
     //perform the animations of the sidebar player views to show the current player
-    handViewController = [[HandViewController alloc] initWithNibName:@"HandViewController" bundle:nil];
-    [handViewController setupHandForPlayer:game.currentPlayer];
-    [self.view addSubview:handViewController.view];
+    //handViewController = [[HandViewController alloc] initWithNibName:@"HandViewController" bundle:nil];
+    //[handViewController setupHandForPlayer:game.currentPlayer];
+    //[self.view addSubview:handViewController.view];
     [self animateOutPlayerSideBarViewOfCurrentPlayer];
     
     
@@ -272,7 +278,7 @@
     
 }
 
--(CardView *)viewAtSelectedPoint:(CGPoint)pointToPlaceSelectedCard //this methods is called outside with a width and height of the screen
+-(CardView *)viewAtSelectedPoint:(CGPoint)pointToPlaceSelectedCard
 {
     if (pointToPlaceSelectedCard.x >= VIEW_SIDE_MARGIN && pointToPlaceSelectedCard.x <= (1024.0 - VIEW_SIDE_MARGIN)//if the point is in the frames row
         && pointToPlaceSelectedCard.y >= VIEW_TOP_MARGIN && pointToPlaceSelectedCard.y <= (VIEW_TOP_MARGIN + MEDIUM_CARD_IMAGE_HEIGHT/2))
@@ -305,233 +311,88 @@
     }
 }
 
--(void)resolveFramesBeginningAtColumn:(int)column
+-(int)indexOfBoardSlotAtSelectedPoint:(CGPoint)point
 {
-    column_index_of_resolving_card = column;
-    row_index_of_resolving_card = [game.players indexOfObject:game.currentPlayer];
-
-    number_of_parts_added_in_column = 0;
-    [self resolveCardAtColumn:column_index_of_resolving_card row:row_index_of_resolving_card];
-    
-    //resolve this frame and then call resolveAllFrames
-    //for each card in the column under the frame starting with the current player's row
-    //    add the appropriate robot parts and keep track of the number of parts added
-    //    remove the appropriate parts and keep track of the number of parts taken away
-    //    etc...
-    int number_of_parts_added = 0;
-    int index_of_current_player = [game.players indexOfObject:game.currentPlayer];
-    int number_of_players = game.players.count;
-    
-    for (int i = 0; i < number_of_players; i++)
-    {
-        //starting at the current players row and
-        int current_index = (i + index_of_current_player) % number_of_players;
+    CardView *hitTestedCV = (CardView *)[self.view hitTest:point withEvent:nil];
+    for (int i = 0; i < 32; i++) {
+        CardView *taggedCV = (CardView *)[self.view viewWithTag:i];
         
-        //number_of_parts_added += [self resolveCardAtColumn:column row:current_index withPlayerIndex:current_index];
+        if (taggedCV == hitTestedCV)
+        {
+            NSLog(@"i: %d", i);
+            return i;
+        }
     }
+    NSLog(@"failed");
+    return -1;
 }
 
--(void)resolveAllFrames
+-(int)indexOfFrameSlotAtSelectedPoint:(CGPoint)point
 {
     
-}
-
--(void)resolveCardAtColumn:(int)column row:(int)row
-{
-    
-    if ([game.board hasCardAtRow:row Column:column])//group 1 means automatic, group 2 needs user interaction
-    {
-        Card *card = [game.board getCardAtRow:row Column:column];
-//        
-//        [self resolveGroupOneActionsForCard:card];
-//        [self resolveGroupTwoActionsForCard:card];
-    }
-
-//-----------------------------------------------------------------------------------------
-    
-    Player *playerOfIndex = [game.players objectAtIndex:row];
-    NSMutableArray *groupTwoCardActions = [[NSMutableArray alloc] init];
-    
-//    if ([game.board hasCardAtRow:row Column:column])
-//    {
-//        NSArray *cardActions = [[game.board getCardAtRow:row Column:column] cardActions];
-//        
-//        for (CardAction *action in cardActions)
-//        {
-//            if (action.group == 1)
-//            {
-//                //perform the action
-//                switch (action.type) {
-//                    case ADD:
-//                        if (![game.board frameisFullAtColumn:column])
-//                        {
-//                            for (NSString *part in action.parts)
-//                            {
-//                                NSNumber *p = [CardAction getEnumForStringColor:part];
-//                                if (p == [NSNumber numberWithInt:WILD])
-//                                {
-//                                    #warning prompt the user to choose which part to add
-//                                    //[self showPartSelectorModalView];
-//                                    //return 1;
-//                                    #warning must make sure that all group 2 actions were resolved first
-//                                }
-//                                else
-//                                {
-//                                    //parts that can't be added to the frame are simply ignored and discarded.
-//                                    //[game.board addPart:p toFrameAtColumn:column];
-//                                    
-//                                    //[self addPart:p toFrameAtColumn:column];
-//                                }
-//                            }
-//                        }
-//                        break;
-//                    case REMOVE:
-//                        if (![game.board frameisFullAtColumn:column])
-//                        {
-//                            for (NSString *part in action.parts)
-//                            {
-//                                NSNumber *p = [CardAction getEnumForStringColor:part];
-//                                if (p == [NSNumber numberWithInt:WILD])
-//                                {
-//                                    #warning prompt the user to choose which part to remove
-//                                    //[self showPartSelectorModalView];
-//                                    //return -1;
-//                                }
-//                                else
-//                                {
-//                                    //parts that can't be added to the frame are simply ignored and discarded.
-//                                    //[game.board removePart:p toFrameAtColumn:column];
-//                                    //[self removePart:p toFrameAtColumn:column];
-//                                }
-//                            }
-//                        }
-//                        break;
-//                    case PEEK:
-//                        
-//                        break;
-//                    case DRAW:
-//                        for (int i = 0; i < action.number; i++)
-//                        {
-//                            //[self drawCardForPlayer:playerOfIndex];
-//                        }
-//                        break;
-//                    case PLAY:
-//                        
-//                        break;
-//                    case SWAP:
-//                        
-//                        break;
-//                    case MOVE:
-//                        // i don't think there ever is a group 1 move action
-//                        break;
-//                    default:
-//                        break;
-//                }
-//            }
-//            else if (action.group == 2)//group 1 actions must be resolved - group 2 is a selection
-//            {
-//                [groupTwoCardActions addObject:action];
-//            }
-//        }
-//    }
-    
-    //return 0;
-}
-
--(void)resolveGroupOneActionsForCard:(Card *) card//no user intervention
-{
-//    for (CardAction *action in card.cardActions)
-//    {
-//        if (action.group == 1)
-//        {
-//            switch (action.type) {
-//                case ADD:
-//                    if (![game.board frameisFullAtColumn:column_index_of_resolving_card])
-//                    {
-//                        for (NSString *part in action.parts)
-//                        {
-//                            NSNumber *p = [CardAction getEnumForStringColor:part];
-//                            
-//                                //parts that can't be added to the frame are simply ignored and discarded.
-//                            //[self addPart:p toFrameAtColumn:column_index_of_resolving_card];
-//                        }
-//                    }
-//                    break;
-//                case REMOVE:
-//                    if (![game.board frameisFullAtColumn:column_index_of_resolving_card])
-//                    {
-//                        for (NSString *part in action.parts)
-//                        {
-//                            NSNumber *p = [CardAction getEnumForStringColor:part];
-//                                //parts that can't be added to the frame are simply ignored and discarded.
-//                            //[self removePart:p toFrameAtColumn:column_index_of_resolving_card];
-//                        }
-//                    }
-//                    break;
-//                case PEEK:
-//                    //nothing to do here
-//                    break;
-//                case DRAW:
-//                    for (int i = 0; i < action.number; i++)
-//                    {
-//                        //[self drawCardForPlayer:[game.players objectAtIndex:row_index_of_resolving_card]];
-//                    }
-//                    break;
-//                case PLAY:
-//                    //nothing to do here
-//                    break;
-//                case SWAP:
-//                    //nothing to do here
-//                    break;
-//                case MOVE:
-//                    //this is safe because there can't be more than one number to move for a group 1 action
-//                    //[self moveFrameByNumber:action.number];
-//                    break;
-//                default:
-//                    break;
-//            }
-//
-//        }
-//    }
-}
-
--(void)showModalViewController:(UIViewController *)viewController fromStartingPoint:(CGPoint)startpoint toEndingPoint:(CGPoint)endpoint
-{
-    [viewController.view setFrame:CGRectMake(startpoint.x, startpoint.y, viewController.view.frame.size.width, viewController.view.frame.size.height)];
-    [self.view addSubview:viewController.view];
-    [UIView animateWithDuration:0.5 animations:^{
-        [viewController.view setFrame:CGRectMake(endpoint.x, endpoint.y, viewController.view.frame.size.width, viewController.view.frame.size.height)];
-    }];
-}
-
--(void)moveFrameByNumber:(int)number
-{
-    //move the frame x number of spaces
-}
-
--(void)addPart:(NSNumber *)p toFrameAtColumn:(int)column
-{
-    if ([game.board addPart:p toFrameAtColumn:column])
-    {
-        //only do graphical stuff in this if statement
-    }
-}
-
--(void)removePart:(NSNumber *)p toFrameAtColumn:(int)column
-{
-    if ([game.board removePart:p toFrameAtColumn:column])
-    {
-        //only do graphical stuff in this if statement
-    }
 }
 
 -(void)drawCardForPlayer:(Player *)player
 {
-//    if (player == game.currentPlayer)
-//        [deckView drawCardToPosition:CGPointMake(0.0, 0.0) afterDelay:0.0];
-//    else if
-    
+    if (player == game.currentPlayer)
+        [self animateCardToSide:[NSNumber numberWithInt:BOTTOM] withDelay:0.0];
+    else
+    {
+        int indexOfPlayer = [game.players indexOfObjectIdenticalTo:player];
+        
+        switch (indexOfPlayer) {
+            case 0:
+                [self animateCardToSide:[NSNumber numberWithInt:RIGHT] withDelay:0.0];
+                break;
+            case 1:
+                [self animateCardToSide:[NSNumber numberWithInt:TOP] withDelay:0.0];
+                break;
+            case 2:
+                [self animateCardToSide:[NSNumber numberWithInt:LEFT] withDelay:0.0];
+                break;
+            case 3:
+                [self animateCardToSide:[NSNumber numberWithInt:TOP] withDelay:0.0];
+                break;
+            default:
+                break;
+        }
+    }
+        
     //[game drawCardForPlayer:player];
+}
+
+-(void)animateCardToSide:(NSNumber *)side withDelay:(CGFloat)delay
+{
+    UIImageView *tempDealtCardView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 320, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+    
+    [tempDealtCardView setImage:[CardView cardBackImage]];
+    
+    [self.view addSubview:tempDealtCardView];
+    [self.view bringSubviewToFront:tempDealtCardView];
+    
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+
+    [UIView animateWithDuration:ANIMATION_DURATION delay:delay options:UIViewAnimationOptionCurveEaseOut animations:^{
+        switch ([side integerValue]) {
+            case BOTTOM:
+                [tempDealtCardView setFrame:CGRectMake(screenWidth/2, screenHeight + VIEW_OFFSET_BUFFER, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                break;
+            case RIGHT:
+                [tempDealtCardView setFrame:CGRectMake(screenWidth + VIEW_OFFSET_BUFFER, screenHeight/2, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                break;
+            case TOP:
+                [tempDealtCardView setFrame:CGRectMake(screenWidth/2, 0.0 - (VIEW_OFFSET_BUFFER + 30.0), SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                break;
+            case LEFT:
+                [tempDealtCardView setFrame:CGRectMake(0.0 - VIEW_OFFSET_BUFFER, screenHeight/2, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
+                break;
+            default:
+                break;
+        }
+    } completion:^(BOOL finished){
+                         
+    }];
 }
 
 -(CardView *)viewInBoardRowsAtSelectedPoint:(CGPoint)point
@@ -574,10 +435,9 @@
                 //make a copy of handcardview and give it to selectedCardView
                 [selectedCardView setCard:handcardview.card];
                 [selectedCardView setFrame:handcardview.frame];
-                //[selectedCardView setOrigin: [self.view convertPoint:handcardview.origin fromView:HandView]];
+
                 [selectedCardView setCenter: [self.view convertPoint:handcardview.center fromView:handViewController.HandView]];
-                //[selectedCardView setImageFromFileName:handcardview.card.imageFileName];
-                
+
                 [selectedCardView setAlpha:1.0];
                 [self.view bringSubviewToFront:selectedCardView];
                 [handcardview setAlpha:0.0];
@@ -671,11 +531,6 @@
     //drag the duplicate card around
 }
 
--(void) presentModalActionView:(ModalViewController *)modalViewController withState: (NSNumber *)state
-{
-    
-}
-
 -(void)cardViewWasTapped:(UITapGestureRecognizer *)sender
 {
 //    CGPoint pointInView = [handViewController.HandView convertPoint:[cardSelectTapGestureRecognizer locationInView:self.view] fromView:self.view];
@@ -699,40 +554,23 @@
     int delay = 0;
     for (int i = 0; i < STARTING_HAND_SIZE; i++) {
         for (int j = 0; j < game.players.count; j++) {
-            UIImageView *tempDealtCardView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 320, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
-            
-            [tempDealtCardView setImage:[CardView cardBackImage]];
-            
-            [self.view addSubview:tempDealtCardView];
-            [self.view bringSubviewToFront:tempDealtCardView];
-            
-            CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-            CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-            
-            [UIView animateWithDuration:ANIMATION_DURATION
-                                  delay: ((delay++)*0.1)
-                                options:UIViewAnimationOptionCurveEaseOut
-                             animations:^{
-                switch (j) {
-                    case 0:
-                        [tempDealtCardView setFrame:CGRectMake(screenWidth/2, screenHeight + VIEW_OFFSET_BUFFER, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
-                        break;
-                    case 1:
-                        [tempDealtCardView setFrame:CGRectMake(screenWidth + VIEW_OFFSET_BUFFER, screenHeight/2, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
-                        break;
-                    case 2:
-                        [tempDealtCardView setFrame:CGRectMake(screenWidth/2, 0.0 - (VIEW_OFFSET_BUFFER + 30.0), SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
-                        break;
-                    case 3:
-                        [tempDealtCardView setFrame:CGRectMake(0.0 - VIEW_OFFSET_BUFFER, screenHeight/2, SMALL_CARD_IMAGE_WIDTH, SMALL_CARD_IMAGE_HEIGHT)];
-                        break;
-                    default:
-                        break;
-                }
+            float currentDelay = (delay++) * 0.1;
+            switch (j) {
+                case 0:
+                    [self animateCardToSide:[NSNumber numberWithInt:BOTTOM] withDelay:currentDelay];
+                    break;
+                case 1:
+                    [self animateCardToSide:[NSNumber numberWithInt:RIGHT] withDelay:currentDelay];
+                    break;
+                case 2:
+                    [self animateCardToSide:[NSNumber numberWithInt:TOP] withDelay:currentDelay];
+                    break;
+                case 3:
+                    [self animateCardToSide:[NSNumber numberWithInt:LEFT] withDelay:currentDelay];
+                    break;
+                default:
+                    break;
             }
-                             completion:^ (BOOL finished){
-
-            }];
         }
     }
 }
@@ -740,16 +578,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        dispatch_sync(dispatch_get_main_queue(), ^(void) {
-//            [self showLoadingModalView];
-//        });
-//        [self startGame];
-//        dispatch_sync(dispatch_get_main_queue(), ^(void) {
-//            [self hideLoadingModalView];
-//        });
-//    });
+    [self startGame];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 }
 
 - (void)viewDidUnload
@@ -757,27 +587,6 @@
     //[self setHandView:nil];
     [self setCardDraggingRecognizer:nil];
     [self setCardSelectTapGestureRecognizer:nil];
-//    [self setRightLegButton:nil];
-//    [self setLeftLegButton:nil];
-//    [self setRightArmButton:nil];
-//    [self setLeftArmButton:nil];
-//    [self setHeadButton:nil];
-//    [self setActionModalView:nil];
-//    [self setHeadButton:nil];
-//    [self setRightArmButton:nil];
-//    [self setLeftArmButton:nil];
-//    [self setLeftLegButton:nil];
-//    [self setRightLegButton:nil];
-//    [self setModalHandView:nil];
-//    [self setPlusThreeButton:nil];
-//    [self setPlusTwoButton:nil];
-//    [self setPlusOneButton:nil];
-//    [self setMinusOneButton:nil];
-//    [self setMinusTwoButton:nil];
-//    [self setMinusThreeButton:nil];
-//    [self setFrameImageView:nil];
-//    [self setPassDeviceOkayButton:nil];
-//    [self setModalTitleLabel:nil];
     [self setPlayCardDraggingRecognizer:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.

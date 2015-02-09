@@ -91,7 +91,7 @@
     }
     else if ([elementName isEqualToString:@"imagename"])
     {
-
+        tempCard.filename = [element stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     else if ([elementName isEqualToString:@"action"])
     {

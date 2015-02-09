@@ -32,14 +32,16 @@ typedef enum
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil superView:(UIView *)superview state: (NSNumber *)modalState;
 
-- (void)animateInFromSide:(NSNumber *)side;
-
-- (void)animateOutToSide:(NSNumber *)side;
-
+/* Appearance methods */
+-(void)animateInFromSide:(NSNumber *)side;
 -(void)fadeIn;
--(void)fadeOut;
 -(void)appear;
+
+/* Disappearance methods */
+-(void)animateOutToSide:(NSNumber *)side;
+-(void)fadeOut;
 -(void)disappear;
-//@property (nonatomic) NSNumber *state;
+
+-(void)setPositionOfMainViewToCenterOfSide:(NSNumber *)side;
 
 @end

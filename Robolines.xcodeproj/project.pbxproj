@@ -103,6 +103,7 @@
 		79BBBAD317680119009B5B7F /* HandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BBBAD117680119009B5B7F /* HandViewController.m */; };
 		79CF95931A7AF85300C8CED3 /* RoboCardSlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CF95911A7AF85300C8CED3 /* RoboCardSlotViewController.m */; };
 		79CF95941A7AF85300C8CED3 /* RoboCardSlotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79CF95921A7AF85300C8CED3 /* RoboCardSlotViewController.xib */; };
+		79CF95971A7B0C7A00C8CED3 /* RoboPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CF95961A7B0C7A00C8CED3 /* RoboPlayerView.m */; };
 		79F6077D175D79A2002B436E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F6077C175D79A2002B436E /* ModalViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +239,8 @@
 		79CF95901A7AF85300C8CED3 /* RoboCardSlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboCardSlotViewController.h; sourceTree = "<group>"; };
 		79CF95911A7AF85300C8CED3 /* RoboCardSlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboCardSlotViewController.m; sourceTree = "<group>"; };
 		79CF95921A7AF85300C8CED3 /* RoboCardSlotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoboCardSlotViewController.xib; sourceTree = "<group>"; };
+		79CF95951A7B0C7A00C8CED3 /* RoboPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboPlayerView.h; sourceTree = "<group>"; };
+		79CF95961A7B0C7A00C8CED3 /* RoboPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoboPlayerView.m; sourceTree = "<group>"; };
 		79F6077B175D79A2002B436E /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		79F6077C175D79A2002B436E /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -383,6 +386,8 @@
 				799899BA15ED9B53006A8110 /* GameGlobals.h */,
 				799DE44215F6EB490060AFA7 /* GameViewController.h */,
 				799DE44315F6EB490060AFA7 /* GameViewController.m */,
+				79CF95951A7B0C7A00C8CED3 /* RoboPlayerView.h */,
+				79CF95961A7B0C7A00C8CED3 /* RoboPlayerView.m */,
 				79FEF3811944C51800877C34 /* Storyboards */,
 				79F6077B175D79A2002B436E /* ModalViewController.h */,
 				79F6077C175D79A2002B436E /* ModalViewController.m */,
@@ -626,6 +631,7 @@
 				79131FFF175592DC00CE581F /* PartSelectorModalViewController.m in Sources */,
 				79F6077D175D79A2002B436E /* ModalViewController.m in Sources */,
 				790B06AE176411E90000D888 /* MoveNumberModalViewController.m in Sources */,
+				79CF95971A7B0C7A00C8CED3 /* RoboPlayerView.m in Sources */,
 				79A1F4D519040D2F00A025AE /* RoboPlayerCreatorViewController.m in Sources */,
 				79BBBAD317680119009B5B7F /* HandViewController.m in Sources */,
 			);

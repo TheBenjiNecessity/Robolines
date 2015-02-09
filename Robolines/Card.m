@@ -9,46 +9,17 @@
 #import "Card.h"
 
 @implementation Card
+@synthesize filename;
 
--(id)initWithImageFileName:(NSString *)filename
+-(id)initWithImageFileName:(NSString *)fname
 {
     if (self = [super init])
     {
-        _filename = filename;
+        filename = fname;
         return self;
     }
     
     return nil;
-}
-
-+(UIImage *)cardBackImage
-{
-    UIImage *cardBack = nil;
-    
-    if (cardBack == nil)
-    {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"card_cardBack" ofType:@"png"];
-        
-        NSData *data = [NSData dataWithContentsOfFile:path];
-        
-        cardBack = [UIImage imageWithData:data];
-    }
-    
-    return cardBack;
-}
-
--(UIImage *)cardFrontImage
-{
-    if (cardImage == nil)
-    {
-        NSString *path = [[NSBundle mainBundle] pathForResource:_filename ofType:@"png"];
-        
-        NSData *data = [NSData dataWithContentsOfFile:path];
-        
-        cardImage = [UIImage imageWithData:data];
-    }
-    
-    return cardImage;
 }
 
 @end
